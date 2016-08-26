@@ -1,0 +1,545 @@
+@import url(https://fonts.googleapis.com/css?family=Questrial|Roboto+Slab:700,300|Satisfy);
+
+body{
+	font-family: 'Questrial', sans-serif;
+	background: #FFF;
+	margin: 0;
+	font-size: 1.25vw;
+	text-rendering: optimizeLegibility;
+}
+
+h2{
+	font-family: 'Roboto Slab', serif;
+}
+
+a {
+	outline: 0;
+}
+
+.header{
+	background: #FFF;
+	height: 90px;
+	position: relative;
+	z-index: 100;
+}
+
+nav{
+	width: auto;
+	position: absolute;
+	right: 5px;
+	bottom: 12px;
+
+}
+
+nav a, #nav-menu a{
+	font-family: 'Roboto Slab', sans-serif;
+	font-size: 22px;
+	color: #AAA;
+	text-decoration: none;
+	margin: 0 10px;
+	transition: color .6s;
+
+}
+
+#nav-menu a{
+	font-size: 42px;
+}
+
+nav a:hover, #nav-menu a:hover{
+	color: #000;
+}
+
+nav li{
+	display: inline-block;
+}
+
+.you-are-here li{
+	background-color: #EEE;
+}
+
+#menu-button {
+	background-image: url('res/menu.png');
+	background-size: 100%;
+	background-position: center center;
+	border-radius: 50%;
+	border: none;
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	left: 20px;
+	top: 20px;
+	z-index: 99;
+	display: none;
+}
+
+#nav-menu{
+	background-color: #FFF;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top:0;
+	left: -108%;
+	transition: left .6s;
+	box-shadow: #333 3px 0px 9px;
+}
+
+#nav-menu ul{
+	margin-top: 80px;
+	list-style: none;
+}
+
+#nav-menu li{
+	width: 100%;
+	margin: 20px 0 20px 0;
+}
+
+#menu-close-button{
+	position: absolute;
+	right: 13px;
+	top: 5px;
+	background-color: white;
+	border:none;
+	font-size: 45px;
+}
+
+/*-- Splash Screen --*/
+
+.splash{
+	background-image: url('splash.JPG');
+	height: 100%;
+	width: 100%;
+	background-position: center center;
+	background-color: #444;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	display: flex;
+	justify-content:center;
+	align-content:center;
+	flex-direction:column;
+}
+
+#splash-branding{
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+	text-shadow: #333 1px 1px 1px;
+}
+
+#splash-branding img{
+	width: 50%;
+}
+
+#splash-branding h1{
+	font-family: 'Roboto Slab', serif;
+	font-size: 5vw;
+	width: 37vw;
+	margin: 0 auto 5px auto;
+	color: #FFF;
+}
+
+#splash-branding p{
+	color: white;
+	width: 37vw;
+	font-size: 1.25vw;
+	border-top: solid #FFF;
+	margin: 0 auto;
+	padding-top: 17px;
+}
+
+/*-- Trio Container --*/
+
+.container{
+	width: 100%;
+	text-align: center;
+}
+
+.container a{
+	text-decoration: none;
+}
+
+.branding-mark{
+	background-image: url('DSC_0175.JPG');
+	margin: 179px auto;
+	background-position: center center;
+	background-size: cover;
+	background-attachment: fixed;
+	width:230px;
+}
+
+.trio{
+	width: 29%;
+	height: 29vw;
+	display: inline-block;
+	text-align: center;
+	margin: 0 1.5%;
+	background-size: 103%;
+	background-position: center center;
+	filter: grayscale(70%);
+	-webkit-filter: grayscale(70%); 
+	transition: filter .6s;
+	-webkit-transition: -webkit-filter .6s;
+}
+
+.trio:hover{
+	filter: grayscale(0%);
+	-webkit-filter: grayscale(0%); 
+}
+
+.cen{
+	height: 100%;
+	display: flex;
+	justify-content:center;
+	align-content:center;
+	flex-direction:column;
+}
+
+.trio h1{
+	color: white;
+	text-shadow: #000 0px 1px 6px;
+	text-align: center;
+	margin: 0;
+	font-family: 'Roboto Slab';
+	font-weight: 400;
+	font-size: 3vw;
+}
+
+#alpha {
+	background-image: url('alpha.JPG');
+}
+
+#beta {
+	background-image: url('beta.JPG');
+}
+
+#omega{
+	background-image: url('omega.JPG');
+}
+
+/*-- About --*/
+
+#about{
+	width: 800px;
+	text-align: center;
+	margin: 10rem auto;
+	font-size: 20px;
+}
+
+#about h2{
+	font-size: 36px;
+}
+
+/*-- Content --*/	
+
+.content{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	text-align: center;
+	background-size: cover;
+	background-attachment: fixed;
+	color: #FFF;
+	text-shadow: #333 1px 1px 1px;
+	display: flex;
+	justify-content:center;
+	align-content:center;
+	flex-direction:column;
+	-webkit-box-shadow: 0px 18px 65px -3px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0px 18px 65px -3px rgba(0,0,0,0.4);
+	box-shadow: 0px 18px 65px -3px rgba(0,0,0,0.4);
+	position: relative;
+}
+.content:nth-of-type(1){
+	z-index: 4;
+}
+.content:nth-of-type(2){
+	z-index: 3;
+}
+.content:nth-of-type(3){
+	z-index: 2;
+}
+.content:nth-of-type(4){
+	z-index: 1;
+}
+
+.center{
+	width: 50%;
+	margin: 0 auto;
+}
+
+/*-- Services --*/
+
+#design{
+	background-image: url('services/design.jpg');
+}
+
+#planning{
+	background-image: url('services/planning.jpg');
+}
+
+#staging{
+	background-image: url('services/staging.jpg');
+}
+
+#delivery{
+	background-image: url('services/delivery.jpg');
+}
+
+/*-- About --*/
+
+.content h1{
+	font-family: 'Roboto Slab', serif;
+	padding-top: 26px;
+	margin-bottom: 8px;
+}
+
+.content p{
+	border-top: solid 2px #fff;
+	margin-top: 0;
+	padding-top: 8px;
+}
+
+.content img{
+	border: solid #FFF 3px;
+	height: 230px;
+	margin: 20px;
+
+}
+
+#delivery img{
+	border: none;
+}
+
+/*-- Footer --*/
+
+footer{
+	background-color: #000;
+	color: #FFF;
+	margin: 0;
+	padding: 4em 0;
+	font-size: 18px;
+}
+
+#foot-center a:hover{
+	text-decoration: none;
+}
+
+.foot-wrap{
+	text-align: center;
+}
+
+.footer-content{
+	width: 15%;
+	min-width: 200px;
+	display: inline-block;
+	vertical-align: top;
+	font-size: .9em;
+	line-height: 1.25em;
+}
+
+footer h2{
+	font-family: 'Roboto Slab', sans-serif;
+	font-size: 1.25em;
+	color: #FFF;
+	margin: 0 0 12px;
+}
+
+.footer-content ul{
+	padding-left:0;
+}
+
+.footer-content li{
+	margin: 8px 0 8px;
+	list-style: none;
+}
+
+.footer-content a{
+	color: white;
+	text-decoration: none;
+	display: inline;
+}
+
+.footer-content a:hover{
+	text-decoration: underline;
+}
+
+#foot-right{
+	width: 500px;
+	margin-right: 3%;
+}
+
+.footer-branding{
+	width: 400px;
+	margin-top: 10px;
+}
+
+#foot-center{
+	text-align: center;
+}
+
+.phone-number{
+	margin-bottom: .55em;
+}
+
+.days{
+	margin-top: .55em;
+}
+
+.social-container{
+	width: 100%;
+	height: 50px;
+	margin: 20px 0 20px;
+	padding-right: 10px;
+}
+
+.soc-link{
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+	margin: 8px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 90%;
+	transition: margin .4s,
+	background-size .4s;
+}
+
+.soc-link:hover{
+	margin: 8px 18px;
+	background-size: 100%;
+}
+
+#fb{
+	background-image: url('res/soc/facebook.png');
+}
+
+#yt{
+	background-image: url('res/soc/youtube.png');
+}
+
+#pin{
+	background-image: url('res/soc/pinterest.png');
+}
+
+#insta{
+	background-image: url('res/soc/instagram.png');
+}
+
+#tw{
+	background-image: url('res/soc/twitter.png');
+}
+
+.mc-closeModal {
+	top: 8px !important;
+	right: 8px !important;
+	z-index: 9999 !important;
+	font-size: 16px !important;
+}
+
+
+@media all and (orientation:portrait) {
+	.header{
+		background: none;
+		height: 0;
+		margin-bottom: 112px;
+	}
+
+	nav{
+		display: none;
+	}
+
+	#menu-button {
+		display:inline;
+	}
+
+	.splash{
+		height: 36vw;
+		background-attachment: scroll;
+	}
+
+	#splash-branding img{
+		width: 80%;
+	}
+
+	#splash-branding p{
+		width: 45vw;
+		font-size: 3vw;
+	}
+	
+	p{
+		text-align: center;
+		font-size: 4vw;
+	}	
+	
+	.content{
+		margin: 0;
+		height: 55vw;
+		background-attachment: scroll;
+	}
+	
+	.content h1{
+		font-size: 4vw;
+		text-align: center;
+	}
+	
+	.content img{
+		display: none;
+	}
+	
+	#about{
+		width: 80%;
+		margin: 1rem auto;
+	}
+	.container{
+		margin: 0;
+	}
+	.branding-mark{
+		margin-bottom: -40px;
+		margin-top: -36px;
+	}
+	.trio{
+		width: 100%;
+		filter: grayscale(0%);
+		-webkit-filter: grayscale(0%);
+		margin: 0;
+	}
+	.trio h1{
+		font-size: 6vw;
+
+	}
+
+
+
+
+
+/*-- footer --*/
+	#foot-left{
+		display: none;
+	}	
+	
+	#foot-right{
+		margin-right: 0;
+		width: 80%;
+	}
+	
+	.footer-branding{
+		width: 100%;
+	}
+
+	a[href^=tel]:before {
+		content: "\1F4DE";
+		margin-left: -1em;
+	}
+	
+	.phone-number{
+		display: inline-block;
+	}
+	
+	.copyright{
+		display: none;
+	}
+
+}
