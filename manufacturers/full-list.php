@@ -14,41 +14,6 @@
 	vendorPrint("sofa");
 ?>-->
 
-<style type="text/css">
-	a {
-		color: #898989;
-		text-decoration: none;
-	}
-	a:hover {
-		color: #000;
-		text-decoration: underline;
-	}
-	ul {
-		list-style: none;
-	}
-
-	.full-list{
-		width: 75%;
-		margin: 0 auto;
-	}
-	.list-content{
-		display: inline-block;
-		vertical-align: top;
-		margin: 40px;
-		width: 25%;
-	}
-	@media all and (orientation:portrait) {
-		.full-list{
-			width: 100%;
-		}
-		.list-content{
-			width: 100%;
-			font-size: 5em;
-		}
-	}
-</style>
-
-
 <div class="full-list">
 <div>
 	<div class="list-content">

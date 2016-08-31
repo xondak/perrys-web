@@ -1,33 +1,12 @@
 <html>
 	<head>
-		<?php include '../meta.php'; ?>
+		<?php include '../template-parts/meta.php'; ?>
 		<title>About Perry's Home Furnishings & Design</title>
-		<style type="text/css">
-			.splash{
-				background-image: none;
-				background-color: white;
-				color: black;
-				justify-content: flex-start;
-				margin-top: 34px;
-			}
-
-			#splash-branding h1, #splash-branding p{
-				color:black;
-				text-shadow: none;
-			}
-
-			#splash-branding p:first-of-type{
-				border-top: solid #000;
-			}
-
-			.center{
-				text-align: center;
-			}
-		</style>	
 	</head>
 	<body>
 		<header class="site-header">
-			<?php include '../site-header.php'; ?>
+			<?php $location = "about";
+				  include '../template-parts/site-header.php'; ?>
 		</header>
 	
 		
@@ -42,7 +21,7 @@
 			</div>
 		</div>
 		
-		<?php include '../footer.php'; ?>
+		<?php include '../template-parts/footer.php'; ?>
 		
 	</body>
 </html>

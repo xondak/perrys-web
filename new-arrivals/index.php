@@ -1,7 +1,7 @@
 <html>
 	<head>
-		<?php include '../meta.php'; ?>
-		<title>About Perry's Home Furnishings & Design</title>
+		<?php include '../template-parts/meta.php'; ?>
+		<title>New Arrivals from Perry's Home Furnishings & Design</title>
 		<style type="text/css">
 			.splash{
 				background-image: url('mag.jpg');
@@ -19,11 +19,10 @@
 	</head>
 	<body>
 		<header class="site-header">
-			<?php include '../site-header.php'; ?>
+			<?php $location = "new";
+				  include '../template-parts/site-header.php'; ?>
 		</header>
-	
-		
-		
+
 		<div id="content" class="wrapper">
 			<div class="splash">
 				<div id="splash-branding">
@@ -31,7 +30,6 @@
 				</div>
 			</div>
 			<div class="container">
-			
 				<div  id="auxiliary" class="content">
 					<div class="center">
 						<p>Perry's Home Furnishings and Design is excited to introduce you to Magnolia Home, the inspiring new line by Joanna Gaines. With a combination of family, aesthetic and practicality in mind, Joanna has thoughtfully designed each piece in the collection and instilled her well-loved style into every detail.</p>
@@ -41,12 +39,10 @@
 						<p>Be the first to experience Magnolia Home by Joanna Gaines. It's as close as midcoast Maine. We look forward to sharing it all with you!</p>
 					</div>
 				</div>
-				
 			</div>
-			
 		</div>
 		
-		<?php include '../footer.php'; ?>
+		<?php include '../template-parts/footer.php'; ?>
 		
 	</body>
 </html>

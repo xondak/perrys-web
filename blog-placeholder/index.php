@@ -1,7 +1,7 @@
 <html>
 	<head>
-		<?php include '../meta.php'; ?>
-		<title>About Perry's Home Furnishings & Design</title>
+		<?php include '../template-parts/meta.php'; ?>
+		<title>Blog @ Perry's Home Furnishings & Design</title>
 		<style type="text/css">
 			.splash{
 				background-image: url('primary.jpg');
@@ -10,7 +10,8 @@
 	</head>
 	<body>
 		<header class="site-header">
-			<?php include '../site-header.php'; ?>
+			<?php $location = "blog";
+				  include '../template-parts/site-header.php'; ?>
 		</header>
 	
 		
@@ -26,7 +27,7 @@
 			
 		</div>
 		
-		<?php include '../footer.php'; ?>
+		<?php include '../template-parts/footer.php'; ?>
 		
 	</body>
 </html>

@@ -1,15 +1,31 @@
-@import url(https://fonts.googleapis.com/css?family=Questrial|Roboto+Slab:700,300|Satisfy);
+@import url(https://fonts.googleapis.com/css?family=Satisfy|Montserrat:700,400);
+
+@font-face {
+    font-family: MontserratLight;
+    src: url('fonts/Montserrat-Light.ttf');
+}
+
+@font-face {
+    font-family: MontserratThin;
+    src: url('/fonts/Montserrat-Thin.ttf');
+}
 
 body{
-	font-family: 'Questrial', sans-serif;
+	font-family: MontserratLight, 'Montserrat', sans-serif;
 	background: #FFF;
 	margin: 0;
-	font-size: 1.25vw;
+	font-size: 12pt;
 	text-rendering: optimizeLegibility;
 }
 
+
+
 h2{
-	font-family: 'Roboto Slab', serif;
+	font-family: MontserratThin, 'Montserrat', sans-serif;
+	font-size: 1.5em;
+}
+label{
+	font-size: 1.25em;
 }
 
 a {
@@ -25,24 +41,25 @@ a {
 
 nav{
 	width: auto;
-	position: absolute;
-	right: 5px;
-	bottom: 12px;
-
+	display: flex;
+	justify-content: flex-end;
+	margin-top:10px;
+	margin-right:10px;
 }
 
 nav a, #nav-menu a{
-	font-family: 'Roboto Slab', sans-serif;
-	font-size: 22px;
+	font-family: MontserratLight, 'Montserrat', sans-serif;
+	font-size: 1.35em;
 	color: #AAA;
 	text-decoration: none;
-	margin: 0 10px;
+	padding: 0.65625em 0.875em;
 	transition: color .6s;
-
+	text-transform: uppercase;
+	font-weight: 400;
 }
 
 #nav-menu a{
-	font-size: 42px;
+	font-size: 2em;
 }
 
 nav a:hover, #nav-menu a:hover{
@@ -55,6 +72,9 @@ nav li{
 
 .you-are-here li{
 	background-color: #EEE;
+}
+.here a{
+	color: #000;
 }
 
 #menu-button {
@@ -73,14 +93,15 @@ nav li{
 }
 
 #nav-menu{
-	background-color: #FFF;
-	width: 100%;
-	height: 100%;
+	background: url("http://api.thumbr.it/whitenoise-361x370.png?background=363636ff&noise=626262&density=35&opacity=21 ");
+	width: 0;
+	height: 130%;
 	position: fixed;
-	top:0;
-	left: -108%;
-	transition: left .6s;
-	box-shadow: #333 3px 0px 9px;
+	top: 0;
+	left: 0;
+	transition: width .6s;
+	box-shadow: inset #222 -10px -10px 9px;
+	overflow: hidden;
 }
 
 #nav-menu ul{
@@ -97,9 +118,10 @@ nav li{
 	position: absolute;
 	right: 13px;
 	top: 5px;
-	background-color: white;
+	background-color: transparent;
 	border:none;
-	font-size: 45px;
+	font-size: 2em;
+	color: #FFF;
 }
 
 /*-- Splash Screen --*/
@@ -134,20 +156,40 @@ nav li{
 }
 
 #splash-branding h1{
-	font-family: 'Roboto Slab', serif;
-	font-size: 5vw;
-	width: 37vw;
+	font-family: MontserratLight, 'Montserrat', sans-serif;
+	font-size: 2.25em;
 	margin: 0 auto 5px auto;
 	color: #FFF;
+	text-transform: uppercase;
+	font-weight: inherit;
 }
 
 #splash-branding p{
 	color: white;
 	width: 37vw;
-	font-size: 1.25vw;
+	font-size: 1em;
 	border-top: solid #FFF;
 	margin: 0 auto;
 	padding-top: 17px;
+}
+
+/*-- No Content --*/
+.no-content{
+	background-image: none;
+	background-color: #FFF;
+	color: #000;
+	justify-content: flex-start;
+	margin-top: 34px;
+	height: auto;
+}
+
+.no-content .splash-branding h1, .no-content .splash-branding p{
+	color:black;
+	text-shadow: none;
+}
+
+.no-content .splash-branding p:first-of-type{
+	border-top: solid #000;
 }
 
 /*-- Trio Container --*/
@@ -202,9 +244,9 @@ nav li{
 	text-shadow: #000 0px 1px 6px;
 	text-align: center;
 	margin: 0;
-	font-family: 'Roboto Slab';
+	font-family: MontserratLight;
 	font-weight: 400;
-	font-size: 3vw;
+	font-size: 1.5em;
 }
 
 #alpha {
@@ -225,11 +267,11 @@ nav li{
 	width: 800px;
 	text-align: center;
 	margin: 10rem auto;
-	font-size: 20px;
+	font-size: 1em;
 }
 
 #about h2{
-	font-size: 36px;
+	font-size: 1.25em;
 }
 
 /*-- Content --*/	
@@ -272,26 +314,43 @@ nav li{
 
 /*-- Services --*/
 
-#design{
-	background-image: url('services/design.jpg');
+textarea{
+	height: 150px;
 }
-
-#planning{
-	background-image: url('services/planning.jpg');
+.form .item{
+	display: inline-flex;
+	width:100%;
+	margin-bottom: 2em;
+	text-align: left;
 }
-
-#staging{
-	background-image: url('services/staging.jpg');
+.item label{
+	font-family: Montserratlight, 'Montserrat', serif;
+	height: 30px;
+	width: 40%;
+	padding: 4px;
 }
-
-#delivery{
-	background-image: url('services/delivery.jpg');
+.item input, .item textarea{
+	width: 60%;
 }
-
+.form-button{
+	background: #1a1a1a;
+	border: 0;
+	border-radius: 2px;
+	color: #fff;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-weight: 700;
+	letter-spacing: 0.046875em;
+	line-height: 1;
+	padding: 0.84375em 0.875em 0.78125em;
+	text-transform: uppercase;
+}
+.form-button:hover{
+	background: #007acc;
+}
 /*-- About --*/
 
 .content h1{
-	font-family: 'Roboto Slab', serif;
+	font-family: MontserratLight, 'Montserrat', sans-serif;
 	padding-top: 26px;
 	margin-bottom: 8px;
 }
@@ -320,7 +379,7 @@ footer{
 	color: #FFF;
 	margin: 0;
 	padding: 4em 0;
-	font-size: 18px;
+	font-size: 1em;
 }
 
 #foot-center a:hover{
@@ -340,8 +399,13 @@ footer{
 	line-height: 1.25em;
 }
 
+#foot-left .here a{
+	font-family: "Montserrat", sans-serif;
+	font-weight: 800;
+}
+
 footer h2{
-	font-family: 'Roboto Slab', sans-serif;
+	font-family: MontserratLight, 'Montserrat', sans-serif;
 	font-size: 1.25em;
 	color: #FFF;
 	margin: 0 0 12px;
@@ -404,7 +468,7 @@ footer h2{
 	background-position: center center;
 	background-size: 90%;
 	transition: margin .4s,
-	background-size .4s;
+				background-size .4s;
 }
 
 .soc-link:hover{
@@ -432,29 +496,205 @@ footer h2{
 	background-image: url('res/soc/twitter.png');
 }
 
-.mc-closeModal {
-	top: 8px !important;
-	right: 8px !important;
-	z-index: 9999 !important;
-	font-size: 16px !important;
+/*-- LANDING PAGE --*/
+
+.tile h1{
+	font-family: MontserratLight, 'Montserrat', sans-serif;
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	color: #FFF;
+	transition: color .4s;
+	word-wrap: break-word;
+	padding: 5px;
 }
 
+.landing-header{
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
 
-@media all and (orientation:portrait) {
+#one a{
+	margin-top: -255px;
+}
+
+.spacer{
+	height:40px;
+}
+
+.tile{
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center center;
+	display: flex;
+	text-align: center;
+	vertical-align: center;
+	justify-content:center;
+	align-content:center;
+	flex-direction:column;
+	transition: filter .4s;
+	-webkit-transition: -webkit-filter .4s;
+	filter: brightness(20%);
+	-webkit-filter: brightness(20%);
+	filter: grayscale(0%);
+	-webkit-filter: grayscale(0%); 
+}
+
+.tile:hover{
+	filter: brightness(20%);
+	-webkit-filter: brightness(20%);
+	filter: grayscale(70%);
+	-webkit-filter: grayscale(70%);
+}
+.tile:hover h1{
+	color: #FFFF44;
+}
+.tile img{
+	margin: 0 auto;
+}
+.container{
+	display: inline-block;
+}
+#one{
+	background-color: #2C2736;
+	background-image: url('img/landing/one.jpg');
+	width: 54%;
+}
+#right-container{
+	width: 46%;
+}
+#two{
+	background-color: #625F68;
+	background-image: url('img/landing/two.jpg');
+	height: 42%;
+}
+#lower-container{
+	height: 58%;
+}
+#three{
+	background-color: #827F88;
+	background-image: url('img/landing/three.jpg');
+	width: 50%;
+	float: right;
+}
+#middle-container{
+	width: 50%;
+	display: inline;
+}
+
+#four{
+	background-color: #C1C1C1;
+	background-image: url('img/landing/four.jpg');
+	height: 50%;
+	width: 50%;
+}
+#five{
+	background-color: #A1A0A5;
+	background-image: url('img/landing/five.jpg');
+	height: 50%;
+	width: 50%;
+}
+
+/* MANUFACTURERS PAGE */
+.center{
+	text-align: center;
+}
+.flex-container a{
+	text-decoration: none;
+}
+.flex-container{
+	flex-direction: row;
+	align-items: center;
+	display: flex;
+	justify-content: space-around;
+	margin: 72px 0;
+}
+.column a:last-of-type{
+	margin-top: 72px;
+}
+.column{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+a {
+	color: #898989;
+	text-decoration: none;
+}
+.list-content a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+ul {
+	list-style: none;
+}
+
+.full-list{
+	width: 75%;
+	margin: 0 auto;
+}
+.list-content{
+	display: inline-block;
+	vertical-align: top;
+	margin: 40px;
+	width: 25%;
+}
+/* MAILCHIMP MODAL FIX */
+.mc-closeModal {
+	position:absolute;
+	top: 0px !important;
+	right: 0px !important;
+	z-index: 9999 !important;
+	font-size: 3.5em !important;
+	text-align: center;
+}
+
+@media all and (max-device-width:900px) {
+	p{
+		font-size: 1em;
+	}
 	.header{
 		background: none;
 		height: 0;
 		margin-bottom: 112px;
 	}
-
+	.landing-header{
+		display: flex;
+		flex-direction: column;
+		height: auto;
+	}
+	#one{
+		width: 100%;
+	}
+	#right-container {
+		width: 100%;
+		height: 645px;
+	}
 	nav{
 		display: none;
+	}
+	#nav-menu a{
+		font-size: 2em;
+		text-transform: unset;
+	}
+	#nav-menu a:hover{
+		color: #FFF;
 	}
 
 	#menu-button {
 		display:inline;
 	}
-
+	.center{
+		width: 75%;
+	}
 	.splash{
 		height: 36vw;
 		background-attachment: scroll;
@@ -466,12 +706,11 @@ footer h2{
 
 	#splash-branding p{
 		width: 45vw;
-		font-size: 3vw;
+		font-size: 1em;
 	}
 	
 	p{
 		text-align: center;
-		font-size: 4vw;
 	}	
 	
 	.content{
@@ -481,7 +720,7 @@ footer h2{
 	}
 	
 	.content h1{
-		font-size: 4vw;
+		font-size: 1.5em;
 		text-align: center;
 	}
 	
@@ -491,7 +730,6 @@ footer h2{
 	
 	#about{
 		width: 80%;
-		margin: 1rem auto;
 	}
 	.container{
 		margin: 0;
@@ -507,24 +745,45 @@ footer h2{
 		margin: 0;
 	}
 	.trio h1{
-		font-size: 6vw;
+		font-size: 1.5em;
 
 	}
+	h2.list-content, .list-content{
+		font-size: 1em;
+	}
 
-
-
-
+	/* MANUFACTURERS PAGE */
+	.flex-container{
+		flex-wrap: wrap;
+	}
+	.flex-container{
+		flex-direction: column;
+		margin: 0;
+	}
+	.column a:last-of-type{
+		margin-top: 0;
+	}
+	.full-list{
+		width: 100%;
+	}
+	.list-content{
+		width: 75%;
+	}
+	
 
 /*-- footer --*/
 	#foot-left{
 		display: none;
-	}	
+	}
 	
 	#foot-right{
 		margin-right: 0;
 		width: 80%;
 	}
 	
+	/*.footer-content{
+		flex-direction: column-reverse;
+	}*/
 	.footer-branding{
 		width: 100%;
 	}
@@ -537,9 +796,16 @@ footer h2{
 	.phone-number{
 		display: inline-block;
 	}
-	
-	.copyright{
-		display: none;
-	}
 
+}
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio : 2){
+	.mc-modal{
+		background-color: #FFF !important;
+		padding: 22px;
+	}
+	/* Magnolia Image sizing */
+	#mag img{
+		margin: 30px 0 0 0 !important;
+	}
 }

@@ -1,43 +1,20 @@
 <html>
 	<head>
-		<?php include '../meta.php'; ?>
+		<?php include '../template-parts/meta.php';
+		?>
 		<title>Services by Perry's Home Furnishings & Design</title>
 	</head>
 	<body>
 		<header class="site-header">
-			<?php include '../site-header.php'; ?>
-			<style type="text/css">
-			.splash{
-				background-image: none;
-				background-color: white;
-				color: black;
-				justify-content: flex-start;
-				margin-top: 34px;
-				height: auto;
-			}
-			
-			#splash-branding h1, #splash-branding p{
-				color:black;
-				text-shadow: none;
-			}
-
-			#splash-branding p:first-of-type{
-				border-top: solid #000;
-			}
-			
-			#splash-branding img{
-				width: auto;
-			}
-			</style>
+			<?php $location = "service";
+				  include '../template-parts/site-header.php'; ?>
 		</header>
-	
-		
 		
 		<div id="content" class="wrapper">
 			<div class="container">
 
-			<div class="splash">
-				<div id="splash-branding">
+			<div class="splash no-content">
+				<div id="splash-branding no-content">
 					<h1>Services</h1>
 				</div>
 			</div>
@@ -68,79 +45,34 @@
 			</div>
 			
 			<div class="container">
-				<style type="text/css">
-					input, textarea {
-						border: 1px solid #BBB;
-						border-radius: 3px;
-						font-family: "Questrial", sans-serif;
-						height: 30px;
-						width: 100%;
-						padding: 4px;
-					}
-					textarea{
-						height: 150px;
-					}
-					label{
-						font-family: 'Roboto Slab', serif;
-						font-weight: bold;
-					}
-					td{
-						padding: 4px;
-					}
-				</style>
 				<div class="center">
 					<h2>Request an Appointment</h2>
 
 					<form name="contactform" method="post" action="send-email-form.php">
- 
-					<table width="450px" style="margin:0 auto">
-						<tr>
-							<td valign="top">
-								<label for="first_name">First Name *</label>
-							</td>
- 
-						 	<td valign="top">
-								<input  type="text" name="first_name" maxlength="50" size="30">
-							</td>
-						</tr>
-						<tr>
-							<td valign="top">
-								<label for="last_name">Last Name *</label>
-							</td>
-							<td valign="top">
-								<input  type="text" name="last_name" maxlength="50" size="30">
-							</td>
-						</tr>
-						<tr>
-							<td valign="top">
-								<label for="email">Email Address *</label>
-							</td>
-							<td valign="top">
-								<input  type="text" name="email" maxlength="80" size="30">
-							</td>
-						</tr>
-						<tr>
-							<td valign="top">
-								<label for="telephone">Telephone Number</label>
-							</td>
-							<td valign="top">
-								<input  type="text" name="telephone" maxlength="30" size="30">
-							</td>
-						</tr>
-						<tr>
-							<td valign="top">
-								<label for="comments">Design Needs *</label>
-							</td>
-							<td valign="top">
-								<textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
-							</td>
-						</tr>
-						<tr>
-							<td colspan="2" style="text-align:center">
-								<input type="submit" value="Submit">
-							</td>
-						</tr>
-					</table>
+					
+					<div class="form">
+						<div class="item">
+							<label for="first_name">First Name*</label>
+							<input  type="text" name="first_name" maxlength="50" size="30">
+						</div>
+						<div class="item">
+							<label for="last_name">Last Name*</label>
+							<input  type="text" name="last_name" maxlength="50" size="30">
+						</div>
+						<div class="item">
+							<label for="email">Email Address*</label>
+							<input  type="text" name="email" maxlength="80" size="30">
+						</div>
+						<div class="item">
+							<label for="telephone">Telephone Number</label>
+							<input  type="text" name="telephone" maxlength="30" size="30">
+						</div>
+						<div class="item">
+							<label for="comments">Design Needs*</label>
+							<textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
+						</div>
+						<input class="form-button" type="submit" value="Submit">
+					</div>
 				</form>
 					
 				</div>
@@ -149,7 +81,7 @@
 			
 		</div>
 		
-		<?php include '../footer.php'; ?>
+		<?php include '../template-parts/footer.php'; ?>
 		
 	</body>
 </html>
