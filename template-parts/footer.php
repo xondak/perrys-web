@@ -5,9 +5,10 @@
 					<div class="social-container">
 						<a href="https://www.facebook.com/perrysfurniture"><div id="fb" class="soc-link"></div></a>
 						<a href="http://www.pinterest.com/perryshome"><div id="pin" class="soc-link"></div></a>
-						<a href=""><div id="insta" class="soc-link"></div></a>
-						<!--<a href="http://twitter.com/PerrysFurniture"><div id="tw" class="soc-link"></div></a>-->
+						<a href="http://www.instagram.com/perryshome"><div id="insta" class="soc-link"></div></a>
 						<a href="https://www.youtube.com/user/perrysfurniture"><div id="yt" class="soc-link"></div></a>
+						<!--<a href=""><div id="email" class="soc-link"></div></a>-->
+
 					</div>
 					<div class="copyright">&copy;2016 Perry's Home Furnishings &amp; Design. All rights reserved.</div>
 				</div>
@@ -51,13 +52,11 @@
 			var toggler="closed";
 			function openClose(){
 				if(toggler==='closed'){
-					document.getElementById('nav-menu').style.width = '80%';
-					//document.getElementById('content').style.marginLeft = '80%';
+					document.getElementById('nav-menu').style.width = '100%';
 					toggler='open';
 				}
 				else if(toggler==='open'){
 					document.getElementById('nav-menu').style.width = '0';
-					//document.getElementById('content').style.marginLeft = '0';
 					toggler='closed';
 				}
 			}

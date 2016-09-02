@@ -22,7 +22,7 @@
 			}
 			
 			#splash-branding img{
-				width: auto;
+				margin:1em;
 			}
 
 		</style>	

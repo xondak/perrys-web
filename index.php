@@ -7,7 +7,7 @@
 	<body>
 		<header class="landing-header">
 				<div class="tile" id="one">
-					<a href="/about">
+					<a href="about">
 						<img src="img/landing/love.png" />
 						<div class="spacer"></div>
 						<img src="img/landing/logo.png" />
@@ -15,7 +15,7 @@
 				</div>
 			<div class="container" id="right-container"><!-- Container Right -->
 				<div class="container" id="lower-container"><!-- Lower Container -->
-					<a href="/new-arrivals">
+					<a href="new-arrivals">
 						<div class="tile" id="three">
 							<h1>New Arrivals</h1>
 						</div>
@@ -27,14 +27,14 @@
 									<h1>Floor Samples</h1>
 								</div>
 							</a>
-							<a href="/manufacturers">
+							<a href="manufacturers">
 								<div class="tile" id="five">
 									<h1>Manufacturers</h1>
 								</div>
 							</a>
 					</div><!-- /Middle Container -->
 				</div>
-					<a href="/services">
+					<a href="services">
 						<div class="tile" id="two">
 							<h1>Services</h1>
 						</div>
