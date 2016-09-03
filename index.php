@@ -8,9 +8,7 @@
 		<header class="landing-header">
 				<div class="tile" id="one">
 					<a href="about">
-						<img src="img/landing/love.png" />
-						<div class="spacer"></div>
-						<img src="img/landing/logo.png" />
+						<img src="img/landing/logo.svg" />
 					</a>
 				</div>
 			<div class="container" id="right-container"><!-- Container Right -->
@@ -45,5 +43,8 @@
 
 		</div>
 		<?php include 'template-parts/footer.php'; ?>
+		<script>
+			window.onload=chromeViewportWorkAround("one","right-container");
+		</script>
 	</body>
 </html>

@@ -126,7 +126,7 @@ nav li{
 
 .splash{
 	background-image: url('splash.JPG');
-	height: 100%;
+	height: 100vh;
 	width: 100%;
 	background-position: center center;
 	background-color: #444;
@@ -188,7 +188,9 @@ nav li{
 .no-content .splash-branding p:first-of-type{
 	border-top: solid #000;
 }
-
+.body{
+	margin:10% 0;
+}
 /*-- Trio Container --*/
 
 .container{

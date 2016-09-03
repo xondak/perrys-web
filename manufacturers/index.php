@@ -8,7 +8,7 @@
 				background-color: white;
 				color: black;
 				justify-content: flex-start;
-				margin-top: 34px;
+				padding-top: 68px;
 				height: auto;
 			}
 			
@@ -23,6 +23,15 @@
 			
 			#splash-branding img{
 				margin:1em;
+			}
+			#splash-branding img{
+				width: auto;
+			}
+
+			@media screen and (max-width: 900px){
+				#splash-branding img{
+					width: 50%;
+				}
 			}
 
 		</style>	

@@ -60,4 +60,16 @@
 					toggler='closed';
 				}
 			}
+			
+			function chromeViewportWorkAround(blockID,blockID2) {
+				// REMOVE THIS FUNCTION AS SOON AS POSSIBLE. THIS IS THE WORST SOLUTION EVER.
+				var h = window.screen.height;
+				if (navigator.userAgent.match(/Android/i) && navigator.userAgent.match(/Chrome/i)) {
+					document.getElementById(blockID).style.height = h + "px";
+					if(blockID2 != null){
+						document.getElementById(blockID2).style.height = h + "px";
+					}
+				}
+			}
+	
 		</script>

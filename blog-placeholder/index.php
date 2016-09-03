@@ -17,7 +17,7 @@
 		
 		
 		<div id="content" class="wrapper">
-			<div class="splash">
+			<div id="bash" class="splash">
 				<div id="splash-branding">
 					<h1>Blog</h1>
 					<p>Our blog is coming soon. Check back here later this year to find weekly content from Perry's Home Furnishings & Design.</p>
@@ -28,6 +28,8 @@
 		</div>
 		
 		<?php include '../template-parts/footer.php'; ?>
-		
+		<script>
+			window.onload=chromeViewportWorkAround("bash",null);
+		</script>
 	</body>
 </html>

@@ -36,7 +36,7 @@
 		</header>
 
 		<div id="content" class="wrapper">
-			<div class="splash">
+			<div id="bash" class="splash">
 				<div id="splash-branding">
 					<img src="../img/vendors/logos/mag.png"
 				</div>
@@ -44,7 +44,7 @@
 
 		</div>
 		<div class="container">
-			<div  class="content">
+			<div  class="body">
 				<div id="auxiliary" class="center">
 					<h1>Welcome, Magnolia Home</h1>
 					<p>Perry's Home Furnishings and Design is excited to introduce you to Magnolia Home, the inspiring new line by Joanna Gaines. With a combination of family, aesthetic and practicality in mind, Joanna has thoughtfully designed each piece in the collection and instilled her well-loved style into every detail.</p>
@@ -53,9 +53,12 @@
 				</div>
 			</div>
 		</div>
-
+			
 		
 		<?php include '../template-parts/footer.php'; ?>
+		<script>
+			window.onload=chromeViewportWorkAround("bash",null);
+		</script>
 		
 	</body>
 </html>
