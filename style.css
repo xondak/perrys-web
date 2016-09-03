@@ -664,6 +664,9 @@ ul {
 }
 
 @media all and (max-device-width:900px) {
+	.tile h1{
+		font-size: 1em;
+	}
 	p{
 		font-size: 1em;
 	}
@@ -796,6 +799,7 @@ ul {
 		margin:0 auto;
 	}
 	.footer-branding{
+		max-width: 325px;
 		width: 100%;
 	}
 
@@ -845,4 +849,10 @@ ul {
 @font-face {
     font-family: MontserratThin;
     src: url('/fonts/Montserrat-Thin.ttf');
+}
+
+@media all and (min-device-width:1080px) {
+	body{
+		font-size:1.25em;
+	}
 }
