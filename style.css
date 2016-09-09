@@ -575,6 +575,9 @@ footer h2{
 #right-container{
 	width: 46%;
 }
+#foot-right .policies a{
+	font-size: .9em;
+}
 #two{
 	background-color: #625F68;
 	background-image: url('img/landing/two.jpg');
@@ -655,6 +658,30 @@ ul {
 	margin: 40px;
 	width: 25%;
 }
+
+/*-- FAQ AND POLICIES --*/
+#faq{
+	margin-top: 130px;
+}
+#faq .center{
+	-webkit-column-count: auto;
+	-webkit-column-width: 430px;
+	-webkit-column-gap: 35px;
+	   -moz-column-count: auto;
+	   -moz-column-width: 430px;
+	   -moz-column-gap: 35px;
+			column-count: auto;
+			column-width: 430px;
+			column-gap: 35px;
+	width: 90%;
+	text-align: left;
+}
+#faq h2{
+	font-weight: 400;
+}
+.column-unbreakable{
+	display: inline-block;
+
 /* MAILCHIMP MODAL FIX */
 .mc-closeModal {
 	position:absolute;

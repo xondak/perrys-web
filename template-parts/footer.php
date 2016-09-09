@@ -11,6 +11,7 @@
 
 					</div>
 					<div class="copyright">&copy;2016 Perry's Home Furnishings &amp; Design. All rights reserved.</div>
+					<div class="policies"><a href="/policies">Policies</a> | <a href="/services">Request An Appointment</a> | <a href="/"></a></div>
 				</div>
 			
 				<div id="foot-center" class="footer-content">
