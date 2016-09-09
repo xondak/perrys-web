@@ -166,9 +166,11 @@ nav li{
 	color: white;
 	width: 37vw;
 	font-size: 1em;
-	border-top: solid #FFF;
 	margin: 0 auto;
-	padding-top: 17px;
+	padding-top: .6em;
+}
+#splash-branding p a{
+	color: #FFF;
 }
 
 /*-- No Content --*/
