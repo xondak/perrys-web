@@ -764,6 +764,9 @@ ul {
 	.center{
 		width: 75%;
 	}
+	.no-content #bash{
+		display:none;
+	}
 	.splash{
 		background-attachment: scroll;
 	}
