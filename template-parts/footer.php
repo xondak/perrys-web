@@ -8,12 +8,10 @@
 				<a href="http://www.instagram.com/perryshome"><div id="insta" class="soc-link"></div></a>
 				<a href="https://www.youtube.com/user/perrysfurniture"><div id="yt" class="soc-link"></div></a>
 				<!--<a href=""><div id="email" class="soc-link"></div></a>-->
-
 			</div>
 			<div class="copyright">&copy;2016 Perry's Home Furnishings &amp; Design. <a href="/copyright">All rights reserved.</a></div>
 			<div class="policies"><a href="/policies">Policies</a> | <a href="/services">Request An Appointment</a> | <a href="/terms">Terms</a></div>
 		</div>
-	
 		<div id="foot-center" class="footer-content">
 			<h2>Contact</h2>
 			<a href="tel:2073383610">
@@ -28,15 +26,10 @@
 			<div class="days contact">Open Saturdays</div>
 			<div class="hours contact">10:00 AM to 5:00 PM</div>
 		</div>
-	
 		<div id="foot-left" class="footer-content">
 		<h2>Navigation</h2>
 			<?php include 'nav.php' ?>
 		</div>
-	
-		
-	
-		
 	</div>
 </footer>
 <script>
@@ -54,6 +47,7 @@
 		if (navigator.userAgent.match(/Android/i) && navigator.userAgent.match(/Chrome/i)) {
 			document.getElementById(blockID).style.height = h + "px";
 			if(blockID2 != null){
+				// This checks if the second ARG is not null (which is only true of the landing page) and applies the same fix to the lower content
 				document.getElementById(blockID2).style.height = h + "px";
 			}
 		}

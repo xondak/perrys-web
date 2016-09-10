@@ -8,7 +8,7 @@
 <div id="faq" class="container">
     <div class="center">
     <h1>Policies</h1>
-        <div data-foldup="yes" class="column-unbreakable">
+        <div class="column-unbreakable">
             <h2>General FAQs and Policies</h2>
             <h3>1. What are your store hours?</h3>
             <p>Monday &#8211; Friday 10:00AM-5:30PM<br />
@@ -31,7 +31,7 @@
             <p>Call our friendly and knowledgeable staff at the store anytime during open hours at (207) 338-3610.<br />
         </div></p>
 
-        <div data-foldup="yes" class="column-unbreakable">
+        <div class="column-unbreakable">
             <h2>Payments FAQs and Policies</h2>
             <h3>1. What type of payments do you accept?</h3>
             <p>Cash, checks, VISA, MasterCard, Discover, American Express, layaway, and GE financing.</p>
@@ -46,7 +46,7 @@
             <p>Yes.<br />
         </div></p>
 
-        <div data-foldup="yes" class="column-unbreakable">
+        <div class="column-unbreakable">
 
             <h2>Website FAQs and Policies</h2>
             <h3>1. Why are there no prices shown on your web site?</h3>
@@ -61,7 +61,7 @@
             <p>We maintain a youtube channel where you can view our TV commercials as well as other videos that welcome you into the world of Perry’s Home Furnishings &#038; Design. You can connect to this channel via our youtube channel button at the top of our page.
         </div></p>
         
-        <div data-foldup="yes" class="column-unbreakable">
+        <div class="column-unbreakable">
 
             <h2>Furniture Delivery FAQs and Policies</h2>
             <h3>1. I have a question about the delivery status of my furniture. How can I get help?</h3>
@@ -82,13 +82,13 @@
             <p>If, for some reason, you need to reschedule your delivery call us at (207) 338-3610 and we will work with you to set up a more convenient delivery time.<br />
         </div></p>
 
-        <div data-foldup="yes" class="column-unbreakable">
+        <div class="column-unbreakable">
             <h2>Furniture Care &amp; Maintenance FAQs and Policies</h2>
             <h3>Whom do I contact with concerns or questions regarding how to clean and maintain my furniture?</h3>
             <p>If you have any concerns or questions regarding how to clean and maintain your furniture, call us at (207) 338-3610. Our friendly and knowledgeable sales team is more than happy to help you.<br />
         </div></p>
 
-        <p><div data-foldup="yes" class="column-unbreakable">
+        <p><div class="column-unbreakable">
             <h2>Deciding on Your New Furniture FAQs and Policies</strong></h2>
             <h3>1. Do you take custom orders?</h3>
             <p>Yes. Call us to speak to our experienced staff. We will happily help you create the furniture piece or pieces you want for your own personalized look.</p>

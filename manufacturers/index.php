@@ -41,5 +41,6 @@
 		</div>
 	</div>
 </div>
-<?php include 'full-list.php'; ?>
-<?php include '../template-parts/lower.php'; ?>
+<?php include 'full-list.php';
+	  include '../template-parts/lower.php';
+?>
