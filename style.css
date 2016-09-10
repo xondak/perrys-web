@@ -90,7 +90,6 @@ nav li{
 	z-index: 99;
 	display: none;
 }
-
 #nav-menu{
 	background: url("http://api.thumbr.it/whitenoise-361x370.png?background=363636ff&noise=626262&density=35&opacity=21 ");
 	width: 0;
@@ -100,6 +99,12 @@ nav li{
 	left: 0;
 	transition: width .6s;
 	overflow: hidden;
+}
+#mb{
+	display:none;
+}
+#mb:checked + #nav-menu{
+	width:100%;
 }
 
 #nav-menu ul{
@@ -131,9 +136,9 @@ nav li{
 	background-position: center center;
 	background-color: #444;
 	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	   -moz-background-size: cover;
+		 -o-background-size: cover;
+		    background-size: cover;
 	background-attachment: fixed;
 	position: relative;
 	display: flex;
@@ -179,7 +184,11 @@ nav li{
 	background-color: #FFF;
 	color: #000;
 	justify-content: flex-start;
+	margin-bottom: 60px;
 	height: auto;
+}
+.no-content .splash{
+	height: 0;
 }
 
 .no-content .splash-branding h1, .no-content .splash-branding p{
@@ -264,15 +273,14 @@ nav li{
 
 /*-- About --*/
 
-#about{
-	width: 800px;
-	text-align: center;
-	margin: 10rem auto;
-	font-size: 1em;
+#about .splash{
+	background-image: url('about/bg.jpg');
 }
 
-#about h2{
-	font-size: 1.25em;
+/* BLOG */
+
+#blog .splash{
+	background-image: url('blog-placeholder/bg.jpg');
 }
 
 /*-- Content --*/	
@@ -610,7 +618,30 @@ footer h2{
 	width: 50%;
 }
 
+/* NEW ARRIVALS */
+#new .splash{
+	background-image: url('new-arrivals/mag.jpg');
+}
+#new img{
+	width: unset;
+	padding: 80px 70px;
+	background-color: rgba(222, 224, 222, 0.9);
+}
+
 /* MANUFACTURERS PAGE */
+
+#man .splash{
+	background-image: none;
+	background-color: white;
+	color: black;
+	justify-content: flex-start;
+}
+
+#man h1, #man p{
+	color:black;
+	text-shadow: none;
+}
+
 .center{
 	text-align: center;
 }
@@ -681,7 +712,7 @@ ul {
 }
 .column-unbreakable{
 	display: inline-block;
-
+}
 /* MAILCHIMP MODAL FIX */
 .mc-closeModal {
 	position:absolute;
@@ -767,9 +798,6 @@ ul {
 		display: none;
 	}
 	
-	#about{
-		width: 80%;
-	}
 	.container{
 		margin: 0;
 	}
@@ -789,6 +817,12 @@ ul {
 	}
 	h2.list-content, .list-content{
 		font-size: 1em;
+	}
+
+	/* NEW ARRIVALS */
+	#new img{
+		max-width: 300px;
+		width: 50%;
 	}
 
 	/* MANUFACTURERS PAGE */

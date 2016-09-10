@@ -2,9 +2,9 @@
 	<nav>
 		<?php include 'nav.php' ?>
 	</nav>
+	<label id="menu-button" for="mb"></label>
+	<input type="checkbox" id="mb"></input>
 	<div id="nav-menu">
 		<?php include 'nav.php' ?>
-		<button type="button" id="menu-close-button" onClick="openClose()">x</button>
 	</div>
-	<button type="button" id="menu-button" onClick="openClose()"></button>
 </div>
