@@ -6,8 +6,8 @@
 ?>
 
 <div id="faq" class="container">
-    <div class="center">
     <h1>Policies and Info</h1>
+    <div class="center">
         <div class="column-unbreakable">
             <h2>General Information</h2>
             <h3>1. Do you offer services for businesses or interior designers?</h3>
