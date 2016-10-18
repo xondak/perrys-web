@@ -20,6 +20,10 @@ a {
 	outline: 0;
 }
 
+article{
+	text-align: left;
+}
+
 .header{
 	background: rgba(255,255,255,0.65);
     background: -moz-linear-gradient(top, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0) 100%);
@@ -277,6 +281,11 @@ nav li{
 	background-image: url('about/bg.jpg');
 }
 
+/*-- History --*/
+#history .splash{
+	background-image: url('history/bg.jpg');
+}
+
 /* BLOG */
 
 #blog .splash{
@@ -510,13 +519,12 @@ footer h2{
 }
 
 /*-- LANDING PAGE --*/
-
 .tile h1{
 	font-family: MontserratLight, 'Montserrat', sans-serif;
 	margin: 0;
 	padding: 0;
 	font-weight: 400;
-	font-size: 1.5em;
+	font-size: 1.55em;
 	text-transform: uppercase;
 	color: #FFF;
 	transition: color .4s;
@@ -534,7 +542,7 @@ footer h2{
 }
 
 #one a{
-	margin-top: -255px;
+	margin-top: 45%;
 }
 
 .spacer{
@@ -552,22 +560,20 @@ footer h2{
 	justify-content:center;
 	align-content:center;
 	flex-direction:column;
-	transition: filter .4s;
-	-webkit-transition: -webkit-filter .4s;
-	filter: brightness(20%);
-	-webkit-filter: brightness(20%);
-	filter: grayscale(0%);
-	-webkit-filter: grayscale(0%); 
+			transition: box-shadow .4s ease-in-out,
+						filter .4s ease-in-out;
+	-webkit-transition: -webkit-box-shadow .4s ease-in-out,
+						-webkit-filter .4s ease-in-out;
+	text-shadow: 0 0 5px #000;
+	-webkit-filter: saturate(.4);
+	filter: saturate(.4);
 }
 
 .tile:hover{
-	filter: brightness(20%);
-	-webkit-filter: brightness(20%);
-	filter: grayscale(70%);
-	-webkit-filter: grayscale(70%);
+	filter: saturate(.9);
 }
 .tile:hover h1{
-	color: #FFFF44;
+	color: #FFFFAA;
 }
 .tile img{
 	margin: 0 auto;
@@ -575,10 +581,14 @@ footer h2{
 .container{
 	display: inline-block;
 }
-#one{
+#outer-link{
+	width: 54%;
+}
+a #one{
 	background-color: #2C2736;
 	background-image: url('img/landing/one.jpg');
-	width: 54%;
+	-webkit-filter: saturate(.6);
+			filter: saturate(.6);
 }
 #right-container{
 	width: 46%;
@@ -688,6 +698,40 @@ ul {
 	vertical-align: top;
 	margin: 40px;
 	width: 25%;
+}
+
+/*-- SOCIAL PAGE --*/
+#social h1{
+	text-shadow: none;
+	color: #000;
+}
+#social .center{
+	width: 100%;
+}
+#social .splash{
+	background-image: url("social/bg.jpg");
+}
+.social-center{
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	justify-content: center;
+	height:100%;
+	text-shadow: none;
+}
+.fb-page{
+	border-radius:5px;
+	border: solid 1px #999;
+	overflow: hidden;
+}
+.soc-widget{
+	margin: 10px;
+	width: 420px;
+	border-radius: 5px;
+}
+.ig{
+	margin: 10px;
+	height: 300px;
 }
 
 /*-- FAQ AND POLICIES --*/
@@ -846,8 +890,20 @@ ul {
 		width: 75%;
 	}
 	
+	/* SOCIAL PAGE */
+	.social-center{
+		flex-direction:column;
+		height: auto;
+		padding-bottom: 1em;
+	}
+	.soc-widget{
+		width:75%;
+    }
+    .ig{
+    	width:75%;
+    }
 
-/*-- footer --*/
+	/*-- footer --*/
 	.foot-wrap{
 		flex-direction: column-reverse;
 		justify-content: center;

@@ -6,11 +6,11 @@
 	</head>
 	<body>
 		<header class="landing-header">
+			<a class="tile" id="outer-link" href="about">
 				<div class="tile" id="one">
-					<a href="about">
-						<img src="img/landing/logo.svg" />
-					</a>
+						<!--<img src="img/landing/logo.svg" />-->
 				</div>
+			</a>
 			<div class="container" id="right-container"><!-- Container Right -->
 				<div class="container" id="lower-container"><!-- Lower Container -->
 					<a href="new-arrivals">
@@ -25,9 +25,9 @@
 									<h1>Floor Samples</h1>
 								</div>
 							</a>
-							<a href="manufacturers">
+							<a href="brands">
 								<div class="tile" id="five">
-									<h1>Manufacturers</h1>
+									<h1>Brands</h1>
 								</div>
 							</a>
 					</div><!-- /Middle Container -->
@@ -44,7 +44,7 @@
 		</div>
 		<?php include 'template-parts/footer.php'; ?>
 		<script>
-			window.onload=chromeViewportWorkAround("one","right-container");
+			window.onload=chromeViewportWorkAround("outer-link","right-container");
 		</script>
 	</body>
 </html>
