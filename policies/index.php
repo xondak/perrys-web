@@ -13,7 +13,7 @@
             <h3>1. Do you offer services for businesses or interior designers?</h3>
             <p>We offer home staging services for real estate agents, individuals, independent designers, and anyone interested in selling a real estate property. If you have a property for sale and you want to make the best impression on potential buyers, home staging services offer a tremendous advantage in today’s competitive real estate market. Call us today to set up a consultation at (207) 338-3610. And, of course, if you are an interior designer, feel free to come in to see how we can help you serve your clients better.</p>
         </div>
-
+   
         <div class="column-unbreakable">
             <h2>Payments Policies</h2>
             <h3>1. What type of payments do you accept?</h3>
