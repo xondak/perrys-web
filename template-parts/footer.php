@@ -43,7 +43,8 @@
 </script>
 <script>
 	function chromeViewportWorkAround(blockID,blockID2) {
-		// REMOVE THIS FUNCTION AS SOON AS POSSIBLE. THIS IS THE WORST SOLUTION EVER.
+		// REMOVE THIS FUNCTION AS SOON AS POSSIBLE. THIS IS THE WORST SOLUTION EVER. 08/16/2016
+		// This hack still disgusts me. Yet Chrome still hasn't fixed its viewport issue. 08/31/2017
 		var h = window.screen.height;
 		if (navigator.userAgent.match(/Android/i) && navigator.userAgent.match(/Chrome/i)) {
 			document.getElementById(blockID).style.height = h + "px";
