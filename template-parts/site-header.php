@@ -1,3 +1,4 @@
+<!-- This contains the navigation for both the desktop and mobile sites -->
 <div id="home" class="header perrys-wrapper">
 	<nav>
 		<?php include 'nav.php' ?>

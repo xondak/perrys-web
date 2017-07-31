@@ -1,3 +1,4 @@
+<!-- This document begins the entire site. -->
 <html>
 	<head>
 		<?php
@@ -7,7 +8,7 @@
 			else {
 				include '../template-parts/meta.php';
 			}
-		?>
+		?> <!-- Pulls in all the metadata for each page -->
 		<title><?php echo($LocName); ?> | Perry's Home Furnishings &amp; Design</title>
 	</head>
 	<body>
@@ -19,7 +20,7 @@
 				else {
 					include '../template-parts/site-header.php';
 				}
-			?>
+			?><!-- Builds page's navigation -->
 		</header>
 	<?php if ($location !== "home"): ?>
 		<div <?php echo('id="' . $location . '"'); ?> class="wrapper<?php echo(' ' . $noContent); ?>">
@@ -31,4 +32,4 @@
 				</div>
 			</div>
 		</div>
-	<?php endif ?>
+	<?php endif ?><!-- Echoes variables from pages to build the splash screens of each page -->

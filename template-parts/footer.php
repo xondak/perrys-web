@@ -2,7 +2,7 @@
 	<div class="foot-wrap">
 		<div id="foot-right" class="footer-content">
 			<img src="/res/logo.svg" alt="" class="footer-branding">
-			<div class="social-container">
+			<div class="social-container"> <!-- Social media -->
 				<a href="https://www.facebook.com/perryshome"><div id="fb" class="soc-link"></div></a>
 				<a href="http://www.pinterest.com/perryshome"><div id="pin" class="soc-link"></div></a>
 				<a href="http://www.instagram.com/perryshome"><div id="insta" class="soc-link"></div></a>
@@ -32,6 +32,7 @@
 		</div>
 	</div>
 </footer>
+<!-- Google Analytics -->
 <script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
