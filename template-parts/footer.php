@@ -10,7 +10,7 @@
 				<!--<a href=""><div id="email" class="soc-link"></div></a>-->
 			</div>
 			<div class="copyright">Original works &copy;2016 Perry's Home Furnishings &amp; Design. All rights reserved.</div>
-			<div class="policies"><a href="/policies">Policies</a> | <a href="/services">Request An Appointment</a> | <a href="/ad">Advertisments</a></div>
+			<div class="policies"><a href="/policies">Policies</a>  |  <a href="/services">Request An Appointment</a>  |  <a href="/ad">Advertising</a></div>
 		</div>
 		<div id="foot-center" class="footer-content">
 			<h2>Contact</h2>
