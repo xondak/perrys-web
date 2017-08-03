@@ -1,11 +1,11 @@
-<?php $LocName="Brands";
+<?php $LocName="Manufacturers";
 	  $location="man";
 	  $noContent="no-content";
 	  include '../template-parts/upper.php';
 ?>
 <div id="man" class="container">
 	<div id="auxiliary">
-		<h1>Brands</h1>
+		<h1>MANUFACTURERS</h1>
 		<div class="flex-container">
 			<div class="column item">
 				<a href="http://flexsteel.com">
@@ -13,6 +13,9 @@
 				</a>
 				<a href="http://lazboy.com">
 					<img src="../img/vendors/logos/laz.png" alt="La-z-boy" class='item'>
+				</a>
+				<a href="https://klaussner.com/">
+					<img src="../img/vendors/logos/kl.jpg" alt="Klaussner" class='item' width="250px">
 				</a>
 			</div>
 			<a href="http://www.magnoliahomefurniture.com/" class='item'>
@@ -24,6 +27,9 @@
 				</a>
 				<a href="http://www.kingkoil.com/catalog/mattress/world-luxury/c-25/c-83">
 					<img src="../img/vendors/logos/wl.png" alt="World Luxury" class='item'>
+				</a>
+				<a href="http://naturaworld.com/us/">
+					<img src="../img/vendors/logos/nat.png" width="250px" alt="Natura" class='item'>
 				</a>
 			</div>
 		</div>

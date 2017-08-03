@@ -737,9 +737,6 @@ a #one{
 	justify-content: space-around;
 	margin: 72px 0;
 }
-.column a:last-of-type{
-	margin-top: 72px;
-}
 .column{
 	display: flex;
 	flex-direction: column;

@@ -1136,6 +1136,9 @@
 			<a href="">King Koil (Laura Ashley, Spinal Guard, World Luxury)</a>
 		</li>
 		<li>
+			<a href="http://naturaworld.com/us/">Natura</a>
+		</li>
+		<li>
 			<a href="http://puretalalaybliss.com">Pure Talalay Bliss</a>
 		</li>
 		<li>
@@ -1308,6 +1311,9 @@
 		</li>
 		<li>
 			<a href="https://www.colonialmills.com/PublicStore/">CMI Colonial Mills</a>
+		</li>
+		<li>
+			<a href="http://www.companyc.com">Company C</a>
 		</li>
 		<li>
 			<a href="http://www.dalyn.com">Dalyn</a>

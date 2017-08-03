@@ -9,7 +9,7 @@
 			<h3>Magnolia Home</h3>
 			<div class="ad-embed">
 				<div class="embed-wrapper embed-left">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/EABSDOSWv4" frameborder="0" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/i3ba4XR9SfQ" frameborder="0" allowfullscreen></iframe>
 				</div>
 				<div class="embed-wrapper embed-right">
 					<p>Creative direction, styling: Laurie Wheeler<br>

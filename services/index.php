@@ -4,7 +4,7 @@
 	  $splashContent="";
 	  include '../template-parts/upper.php';
 ?>
-<div class="body">
+<div class="container">
 	<div class="center">
 		<h1>SERVICES</h1>
 	</div>
