@@ -2,7 +2,7 @@
 	<head>
 		<?php $location = "home";
 			  include 'template-parts/meta.php'; ?>
-		<title>Perry's Home Furnishings & Design</title>
+		<title>Perry's Home Furnishings &amp; Design</title>
 	</head>
 	<body>
 		<header class="landing-header">

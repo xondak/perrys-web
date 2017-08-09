@@ -41,20 +41,7 @@
 	ga('create', 'UA-73122506-1', 'auto');
 	ga('send', 'pageview');
 </script>
-<script>
-	function chromeViewportWorkAround(blockID,blockID2) {
-		// REMOVE THIS FUNCTION AS SOON AS POSSIBLE. THIS IS THE WORST SOLUTION EVER. 08/16/2016
-		// This hack still disgusts me. Yet Chrome still hasn't fixed its viewport issue. 08/31/2017
-		var h = window.screen.height;
-		if (navigator.userAgent.match(/Android/i) && navigator.userAgent.match(/Chrome/i)) {
-			document.getElementById(blockID).style.height = h + "px";
-			if(blockID2 != null){
-				// This checks if the second ARG is not null (which is only true of the landing page) and applies the same fix to the lower content
-				document.getElementById(blockID2).style.height = h + "px";
-			}
-		}
-	}
-</script>
+
 <!-- Facebook Pixel Code -->
 <script>
 	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
