@@ -23,6 +23,18 @@ a {
 	outline: 0;
 }
 
+a .permalink{
+	width: 30px;
+	height: 30px;
+	background-image: url('/res/mini-sprite.png');
+	background-position: -160px 0;
+}
+.permalink-wrapper{
+	width: 30px;
+	height: 30px;
+	margin: 0 auto;
+}
+
 article{
 	text-align: left;
 }
@@ -709,6 +721,16 @@ a #one{
 	padding: 80px 70px;
 	background-color: rgba(222, 224, 222, 0.9);
 }
+.new-posts img{
+	max-width:100%;
+	margin-top: 2em;
+}
+.new-posts h2{
+	margin-bottom: 0;
+}
+.new-posts h2 + p {
+	margin-top: 0;
+}
 
 /* MANUFACTURERS PAGE */
 
@@ -916,7 +938,15 @@ ul {
 	.content img{
 		display: none;
 	}
-	
+	.two-column{
+		flex-direction: column-reverse;
+	}
+	.two-column .container{
+		width: 100%;
+	}
+	.two-column .col-1{
+		width: unset;
+	}
 	.container{
 		margin: 0;
 	}
@@ -997,9 +1027,24 @@ ul {
 		width: 100%;
 	}
 
-	a[href^=tel]:before {
-		content: "\1F4DE";
-		margin-left: -1em;
+	#foot-center a:before {
+		height: 20px;
+	    width: 20px;
+		content: " ";
+		background-image: url(/res/mini-sprite.png);
+		margin-left: -1.3em;
+	    position: absolute;
+	}
+	a[href^=tel]:before{
+		background-position: 0 -36px;
+	}
+	a[href^="https://goo.gl"]{
+		position:relative;
+	}
+	a[href^="https://goo.gl"]:before{
+		background-position: -24px -36px;
+		left:-105px;
+		bottom:-38;
 	}
 	
 	.phone-number{
