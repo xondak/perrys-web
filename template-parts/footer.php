@@ -9,7 +9,7 @@
 				<a href="https://www.youtube.com/user/perrysfurniture"><div id="yt" class="soc-link"></div></a>
 				<!--<a href=""><div id="email" class="soc-link"></div></a>-->
 			</div>
-			<div class="copyright">&copy;2017 Perry's Home Furnishings &amp; Design - All rights reserved.</div>
+			<div class="copyright"><a href="/copyright">&copy;2017 Perry's Home Furnishings &amp; Design - All rights reserved.</a></div>
 			<div class="policies"><a href="/policies">Policies</a>  |  <a href="/services">Request An Appointment</a>  |  <a href="/ad">Advertising</a></div>
 		</div>
 		<div id="foot-center" class="footer-content">
