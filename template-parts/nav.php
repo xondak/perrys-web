@@ -14,7 +14,7 @@
 	<li>
 		<a href="/sale/shop/">Sale</a>
 	</li>
-	<li <?php if($location==="blog"){echo"class='here'";} ?>>
-		<a href="/blog-placeholder">Blog</a>
+	<li <?php if($location==="new"){echo"class='here'";} ?>>
+		<a href="/new-arrivals">New Arrivals</a>
 	</li>
 </ul>

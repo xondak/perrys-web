@@ -28,6 +28,11 @@ a .permalink{
 	height: 30px;
 	background-image: url('/res/mini-sprite.png');
 	background-position: -160px 0;
+	filter: opacity(.2);
+	transition: filter 1s;
+}
+a .permalink:hover{
+	filter: opacity(.6);
 }
 .permalink-wrapper{
 	width: 30px;
@@ -732,6 +737,42 @@ a #one{
 	margin-top: 0;
 }
 
+.new-posts a[href^=tel]{
+	display: block;
+	pointer-events: none;
+	width:300px;
+	margin: 3.5em auto;
+	color: #898989;
+	padding: 20px;
+	font-size: .8em;
+	line-height: 1.3em;
+	letter-spacing: .2em;
+	transition: color .7s;
+	border: 1px solid;
+	text-transform: uppercase;
+}
+
+#post-nav{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+    margin-bottom: 10%;
+}
+#post-nav a, #post-nav .disabled{
+	font-size: 3em;
+	font-weight: bold;
+}
+#post-nav a{
+	color: #000;
+}
+#post-nav .disabled{
+	color: #AAA;
+}
+#post-nav .spacer{
+	width:10%;
+}
+
+
 /* MANUFACTURERS PAGE */
 
 #man .splash{
@@ -972,6 +1013,13 @@ ul {
 	#new img{
 		max-width: 300px;
 		width: 50%;
+	}
+	.new-posts h2{
+		font-size: 1.2em;
+	}
+	.new-posts a[href^=tel]{
+		pointer-events: unset;
+		width: unset;
 	}
 
 	/* MANUFACTURERS PAGE */
