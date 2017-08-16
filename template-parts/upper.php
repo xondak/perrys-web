@@ -22,14 +22,23 @@
 				}
 			?><!-- Builds page's navigation -->
 		</header>
-	<?php if ($location !== "home"): ?>
+	<?php //if ($location !== "home"): ?>
 		<div <?php echo('id="' . $location . '"'); ?> class="wrapper<?php echo(' ' . $noContent); ?>">
 			<div id="bash" class="splash">
+				<div class="blank"> </div>
 				<div id="splash-branding">
 					<div class="center">
 						<?php echo($splashContent);?>
 					</div>
 				</div>
+				<?php
+					if ($scrollDown==true){
+						echo "<a id='down'></a>";
+					}
+					else{
+						echo "<div class='blank'> </div>";
+					}
+				?>
 			</div>
 		</div>
-	<?php endif ?><!-- Echoes variables from pages to build the splash screens of each page -->
+	<?php// endif ?><!-- Echoes variables from pages to build the splash screens of each page -->

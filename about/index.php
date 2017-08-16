@@ -1,9 +1,10 @@
 <?php $LocName="About";
 	  $location="about";
 	  $splashContent="<h1>About</h1>";
+	  $scrollDown=true;
 	  include '../template-parts/upper.php';
 ?>
-<div class="container">
+<div id="down" class="container">
 	<div class="body">
 		<div id="body" class="center">
 

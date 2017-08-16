@@ -4,6 +4,8 @@ body{
 	margin: 0;
 	font-size: 12pt;
 	text-rendering: optimizeLegibility;
+	-webkit-transition: -webkit-transform 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out;
 }
 
 p, article{
@@ -21,13 +23,16 @@ label{
 
 a {
 	outline: 0;
+	color: #2f1013;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+	border-bottom: 1px solid;
 }
 
 a .permalink{
-	width: 30px;
-	height: 30px;
-	background-image: url('/res/mini-sprite.png');
-	background-position: -160px 0;
+
 	filter: opacity(.2);
 	transition: filter 1s;
 }
@@ -35,8 +40,7 @@ a .permalink:hover{
 	filter: opacity(.6);
 }
 .permalink-wrapper{
-	width: 30px;
-	height: 30px;
+
 	margin: 0 auto;
 }
 
@@ -72,7 +76,7 @@ nav ul{
 nav a, #nav-menu a{
 	font-family: MontserratLight, 'Montserrat', sans-serif;
 	font-size: 1.35em;
-	color: #444;
+	color: #777;
 	text-decoration: none;
 	padding: 0.65625em 0.875em;
 	transition: color .6s;
@@ -87,6 +91,7 @@ nav a, #nav-menu a{
 
 nav a:hover, #nav-menu a:hover{
 	color: #000;
+	border-bottom: none;
 }
 
 nav li{
@@ -185,9 +190,9 @@ nav li{
 	background-attachment: fixed;
 	position: relative;
 	display: flex;
-	justify-content:center;
-	align-content:center;
 	flex-direction:column;
+	align-content:center;
+	justify-content:space-between;
 }
 
 #splash-branding{
@@ -198,7 +203,7 @@ nav li{
 }
 
 #splash-branding img{
-	width: 50%;
+	width: 100%;
 }
 
 #splash-branding h1{
@@ -219,6 +224,26 @@ nav li{
 }
 #splash-branding p a{
 	color: #FFF;
+}
+
+a[ id="down" ]{
+	display: block;
+    height: 115px;
+    width: 130px;
+    background-image: url(res/mini-sprite.png);
+    background-position: 0 -61px;
+	background-repeat: no-repeat;
+	transition: background-position .7s;
+	margin:0 auto;
+}
+a[ id="down" ]:hover{
+	background-position: 0 -70px;
+	border-bottom: none;
+}
+
+a[ id="down" ]:target ~ body .container{
+    -webkit-transform: translateY( -100vh );
+    transform: translateY( -100vh );
 }
 
 /*-- No Content --*/
@@ -737,9 +762,8 @@ a #one{
 	margin-top: 0;
 }
 
-.new-posts a[href^=tel]{
+.new-posts p:last-of-type > a {
 	display: block;
-	pointer-events: none;
 	width:300px;
 	margin: 3.5em auto;
 	color: #898989;
@@ -750,6 +774,12 @@ a #one{
 	transition: color .7s;
 	border: 1px solid;
 	text-transform: uppercase;
+}
+.new-posts a[href^=tel]{
+	pointer-events: none;
+}
+.new-posts p:last-of-type > a:hover{
+	color: #000;
 }
 
 #post-nav{
@@ -809,13 +839,10 @@ a #one{
 .column a{
 		margin:1em .25em;
 }
-a {
-	color: #898989;
-	text-decoration: none;
-}
+
 .list-content a:hover {
 	color: #000;
-	text-decoration: underline;
+	text-decoration: none;
 }
 ul {
 	list-style: none;

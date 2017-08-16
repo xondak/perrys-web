@@ -14,9 +14,11 @@
 		$LocName=$title; // Sets page title
 		$location=$loc; // Sets location (for nav bar)
 		$splashContent=$splash; // Sets splash content
-		$noContent=$noc; // Defines if the page lacks a splash	
+		$noContent=$noc; // Defines if the page lacks a splash
+		$scrollDown=true;
 		include '../template-parts/upper.php'; // Begins rendering page
 	}
+
 
 	function renderFive($dir, $Parsedown){
 		$indir = array_filter(scandir($dir), function($item) { // This removes the . and .. directories from the array
@@ -41,14 +43,16 @@
 
 		startPage("New Arrivals", "new", "<h1>New Arrivals</h1>", null); // Passes relevant info to the startPage function.
 
-		print("<article class='container post'>"); // Generates the article wrapper
+		print("<div id='down' class='container post'>"); // Generates the article wrapper
 	
 
 		foreach ($posts as &$value) {
 			print("<div class='body'><div class='center new-posts'>"); // Creates individual post wrappers
 			$post = $dir . $value; // Appends 'posts/' to each file
+			$fancy = substr($value, 0, -3);
+			
 			echo is_readable($post) ? $Parsedown->text(file_get_contents($post)) : "<h1>Can't find ".htmlspecialchars($post)."</h1>"; // Imports .md files and pipes it through Parsedown, fails graciously
-			echo "<div class='permalink-wrapper'><a href='?id=" . substr($value, 0, -3) . "' alt='Permalink'><div class='permalink'></div></a></div>"; // Strips the .md from permalink and adds it to the end of each page
+			echo "<div class='permalink-wrapper'><a href='?id=" . $fancy . "' alt='Permalink'><div class='permalink'>" . date("F jS, Y", strtotime($fancy)) . "</div></a></div>"; // Strips the .md from permalink and adds it to the end of each page
 			print("</div></div>"); // Closes each post's wrapper
 		}
 		print "<div id='post-nav'>";
@@ -70,7 +74,7 @@
 			print "<span class='disabled'>&gt;</span>";
 		}
 		print "</div>";
-		print("</article>"); // Closes main wrapper
+		print("</div>"); // Closes main wrapper
 	}
 	
 	function renderSingle($dir, $Parsedown){
@@ -78,9 +82,11 @@
 		if (is_readable($post) == true) {
 			startPage(htmlspecialchars($_GET["id"]), "new", " ", "no-content"); // Passes relevant info to the startPage function.
 			
-			print("<article class='container post'><div class='center new-posts'>"); // Creates individual post wrappers
+			print("<div class='container post'><div class='center new-posts'>"); // Creates individual post wrappers
 			echo $Parsedown->text(file_get_contents($post)); // Imports .md files and pipes it through Parsedown, fails graciously
-			print("</div></article>"); // Closes each post's wrapper
+			$fancy = substr($post, 0, -3);
+			echo date("F jS, Y", strtotime($fancy));
+			print("</div></div>"); // Closes each post's wrapper
 		}
 		else{
 			include("../404/404.php");
