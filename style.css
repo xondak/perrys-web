@@ -31,13 +31,14 @@ a:hover{
 	border-bottom: 1px solid;
 }
 
-a .permalink{
+.permalink{
 
 	filter: opacity(.2);
 	transition: filter 1s;
 }
-a .permalink:hover{
+.permalink:hover{
 	filter: opacity(.6);
+	border-bottom: none;
 }
 .permalink-wrapper{
 
@@ -557,7 +558,7 @@ footer h2{
 }
 
 .footer-content a:hover{
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 #foot-right{
@@ -610,6 +611,7 @@ footer h2{
 
 .soc-link:hover{
 	margin: 8px 18px;
+	border-bottom: none;
 }
 
 #fb{
@@ -794,6 +796,9 @@ a #one{
 }
 #post-nav a{
 	color: #000;
+}
+#post-nav a:hover{
+	border-bottom: none;
 }
 #post-nav .disabled{
 	color: #AAA;

@@ -52,7 +52,7 @@
 			$fancy = substr($value, 0, -3);
 			
 			echo is_readable($post) ? $Parsedown->text(file_get_contents($post)) : "<h1>Can't find ".htmlspecialchars($post)."</h1>"; // Imports .md files and pipes it through Parsedown, fails graciously
-			echo "<div class='permalink-wrapper'><a href='?id=" . $fancy . "' alt='Permalink'><div class='permalink'>" . date("F jS, Y", strtotime($fancy)) . "</div></a></div>"; // Strips the .md from permalink and adds it to the end of each page
+			echo "<div class='permalink-wrapper'><a href='?id=" . $fancy . "' alt='Permalink' class='permalink'>" . date("F jS, Y", strtotime($fancy)) . "</a></div>"; // Strips the .md from permalink and adds it to the end of each page
 			print("</div></div>"); // Closes each post's wrapper
 		}
 		print "<div id='post-nav'>";
