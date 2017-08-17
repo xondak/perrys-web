@@ -30,18 +30,34 @@ a:hover{
 	text-decoration: none;
 	border-bottom: 1px solid;
 }
-
-.permalink{
-
+blockquote{
+	text-align: left;
+	background-color: #EEE;
+	padding: .2em 1em;;
+}
+pre{
+	padding: 0 .6em;
+    letter-spacing: 0;
+    font-size: .8em;
+}
+code{
+	background-color: #333;
+    color: #FFF;
+    display: block;
+	padding: 0 .6em;
+	letter-spacing: 0;
+    font-size: .8em;
+}
+.permalink-wrapper{
 	filter: opacity(.2);
 	transition: filter 1s;
+	margin-bottom: 10%;
 }
-.permalink:hover{
+.permalink-wrapper:hover{
 	filter: opacity(.6);
 	border-bottom: none;
 }
 .permalink-wrapper{
-
 	margin: 0 auto;
 }
 
@@ -248,6 +264,9 @@ a[ id="down" ]:target ~ body .container{
 }
 
 /*-- No Content --*/
+.no-content ~ .container:last-of-type{
+	margin-bottom: 10%;
+}
 .no-content{
 	background-image: none;
 	background-color: #FFF;
@@ -788,7 +807,10 @@ a #one{
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-    margin-bottom: 10%;
+	margin-bottom: 10%;
+}
+.no-content ~ .container #post-nav{
+	margin-bottom: 0;
 }
 #post-nav a, #post-nav .disabled{
 	font-size: 3em;

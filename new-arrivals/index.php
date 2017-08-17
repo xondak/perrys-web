@@ -3,7 +3,7 @@
 	$Parsedown = new Parsedown(); // Invokes Parsedown -- Moved from inside the foreach loop
 	$dir = 'posts/'; // $dir defines the directory to search for the .md Markdown files
 
-	if ( htmlspecialchars($_GET["id"]) == 0 ) {
+	if ( htmlspecialchars($_GET["id"]) == null ) {
 		renderFive($dir, $Parsedown);
 	}
 	else {
@@ -40,8 +40,12 @@
 		}
 
 		
-
-		startPage("New Arrivals", "new", "<h1>New Arrivals</h1>", null); // Passes relevant info to the startPage function.
+		if ($next >= 1){
+			startPage("New Arrivals", "new", " ", "no-content"); // Passes relevant info to the startPage function.
+		}
+		else{
+			startPage("New Arrivals", "new", "<h1>New Arrivals</h1>", null); // Passes relevant info to the startPage function.
+		}
 
 		print("<div id='down' class='container post'>"); // Generates the article wrapper
 	
@@ -75,6 +79,7 @@
 		}
 		print "</div>";
 		print("</div>"); // Closes main wrapper
+		include '../template-parts/lower.php'; // Includes the footer for the page
 	}
 	
 	function renderSingle($dir, $Parsedown){
@@ -84,14 +89,15 @@
 			
 			print("<div class='container post'><div class='center new-posts'>"); // Creates individual post wrappers
 			echo $Parsedown->text(file_get_contents($post)); // Imports .md files and pipes it through Parsedown, fails graciously
-			$fancy = substr($post, 0, -3);
-			echo date("F jS, Y", strtotime($fancy));
+			$fancy = substr( htmlspecialchars($_GET["id"]), 0, -3);
+			echo "<div class='permalink-wrapper'>" . date("F jS, Y", strtotime($fancy)) . "</div>";
 			print("</div></div>"); // Closes each post's wrapper
+			include '../template-parts/lower.php'; // Includes the footer for the page
 		}
 		else{
 			include("../404/404.php");
 		}
 	}
 
-	include '../template-parts/lower.php'; // Includes the footer for the page
+	
 ?>
