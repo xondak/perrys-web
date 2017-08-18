@@ -102,6 +102,7 @@ nav a, #nav-menu a{
 	transition: color .6s;
 	text-transform: uppercase;
 	font-weight: 400;
+	white-space: nowrap;
 }
 
 #nav-menu a{
@@ -259,15 +260,15 @@ nav li{
 a[ id="down" ]{
 	display: block;
     height: 115px;
-    width: 130px;
+    width: 90px;
     background-image: url(res/mini-sprite.png);
-    background-position: 0 -61px;
+    background-position: 0 -80px;
 	background-repeat: no-repeat;
 	transition: background-position .7s;
 	margin:0 auto;
 }
 a[ id="down" ]:hover{
-	background-position: 0 -70px;
+	background-position: 0 -60px;
 	border-bottom: none;
 }
 
@@ -1087,6 +1088,9 @@ ul {
 	.new-posts a[href^=tel]{
 		pointer-events: unset;
 		width: unset;
+	}
+	.new-posts p:last-of-type > a{
+		width: auto;
 	}
 
 	/* MANUFACTURERS PAGE */
