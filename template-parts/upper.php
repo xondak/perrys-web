@@ -10,6 +10,28 @@
 			}
 		?> <!-- Pulls in all the metadata for each page -->
 		<title><?php echo($LocName); ?> | Perry's Home Furnishings &amp; Design</title>
+		<script> 
+			function viewportToPixels(value) { // This function converts viewport height to pixels
+				var parts = value.match(/([0-9\.]+)(vh|vw)/)
+				var q = Number(parts[1])
+				var side = window[['innerHeight', 'innerWidth'][['vh', 'vw'].indexOf(parts[2])]]
+				return side * (q/100)
+			}
+
+			var noContentPage = document.getElementsByClassName('no-content'); // Checks if page is a 'no-content' page
+			
+			window.addEventListener('scroll', function(e) {
+				var viewportHeight = viewportToPixels("100vh"); // Sets previous function's result to value  
+				var nav = document.getElementById('home');
+				if(window.scrollY >= viewportHeight && noContentPage.length == 0){ // Determines where the viewport is and checks if the page is no-content
+					nav.classList.add("nav-shrunk"); // Adds the class to the nav bar
+				}
+				else if(window.scrollY <= viewportHeight && noContentPage.length == 0){
+					nav.classList.remove("nav-shrunk");
+				}
+			});
+
+		</script>
 	</head>
 	<body>
 		<header class="site-header">
@@ -33,7 +55,7 @@
 				</div>
 				<?php
 					if ($scrollDown==true){
-						echo "<a id='down'></a>";
+						echo "<a id='down' href='#down'></a>";
 					}
 					else{
 						echo "<div class='blank'> </div>";

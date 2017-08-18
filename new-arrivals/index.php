@@ -21,22 +21,22 @@
 
 
 	function renderFive($dir, $Parsedown){
-		$indir = array_filter(scandir($dir), function($item) { // This removes the . and .. directories from the array
+		$indir = array_filter(scandir($dir,1), function($item) { // This removes the . and .. directories from the array
 			return $item[0] !== '.';
 		});
 
 		$next = htmlspecialchars($_GET["next"]); // Grabs ?next= string from url, increments and decrements into separate variables.
-		$goNext = $next + 1;
+		$goNext = $next + 1; 
 		$goPrev = $next - 1;
-		$grabNext = $next * 3;
-		$grabFurther = $grabNext + 3;
+		$grabNext = $next * 3; // grabNext is used to set the first post in the process
+		$grabFurther = $grabNext + 3; // Used to determine if there are more posts in the post-nav calculation
 		
-		$reversed = array_reverse($indir); // Reverses the display order
+
 		if($next == 0){
-			$posts = array_slice($reversed, 0, 3); // This grabs the first three entries in the array
+			$posts = array_slice($indir, 0, 3); // This grabs the first three entries in the array
 		}
 		else {
-			$posts = array_slice($reversed, $grabNext, 3); // This sets the next page
+			$posts = array_slice($indir, $grabNext, 3); // This sets the next page
 		}
 
 		
@@ -53,7 +53,7 @@
 		foreach ($posts as &$value) {
 			print("<div class='body'><div class='center new-posts'>"); // Creates individual post wrappers
 			$post = $dir . $value; // Appends 'posts/' to each file
-			$fancy = substr($value, 0, -3);
+			$fancy = substr($value, 0, -3); // Removes .md from the end of each filename. Used to set the permalink
 			
 			echo is_readable($post) ? $Parsedown->text(file_get_contents($post)) : "<h1>Can't find ".htmlspecialchars($post)."</h1>"; // Imports .md files and pipes it through Parsedown, fails graciously
 			echo "<div class='permalink-wrapper'><a href='?id=" . $fancy . "' alt='Permalink' class='permalink'>" . date("F jS, Y", strtotime($fancy)) . "</a></div>"; // Strips the .md from permalink and adds it to the end of each page
@@ -61,24 +61,23 @@
 		}
 		print "<div id='post-nav'>";
 		
-		if($goPrev == 0){
-			echo "<a href='/new-arrivals'>&lt;</a>";
+		if($goPrev == 0){ // This checks if goPrev will take us to the first page.
+			echo "<a href='/new-arrivals'>&lt;</a>"; // Sets URL for vanity's sake instead of displaying /new-arrivals/?next=0
 		}
-		elseif ($goPrev >= 1){
+		elseif ($goPrev >= 1){ // Checks if there are previous posts
 			echo "<a href='?next=" . $goPrev . "'>&lt;</a>";
 		}
-		else{
+		else{ // Disables previous button when appropriate
 			print "<span class='disabled'>&lt;</span>";
 		}
-		print "<div class='spacer'></div>";
-		if($grabFurther < count($indir)){
+		print "<div class='spacer'></div>"; // Adds spacer between buttons
+		if($grabFurther < count($indir)){ 
 			echo "<a href='?next=" . $goNext . "'>&gt;</a>";
 		}
 		else{
 			print "<span class='disabled'>&gt;</span>";
 		}
-		print "</div>";
-		print("</div>"); // Closes main wrapper
+		print "</div><!-- end post-nav --></div><!-- end section -->";
 		include '../template-parts/lower.php'; // Includes the footer for the page
 	}
 	

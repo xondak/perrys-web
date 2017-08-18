@@ -1177,6 +1177,7 @@ class Parsedown
                 'attributes' => array(
                     'src' => $Link['element']['attributes']['href'],
                     'alt' => $Link['element']['text'],
+                    'id' => $Link['element']['text'],
                 ),
             ),
         );

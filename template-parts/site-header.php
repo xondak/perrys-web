@@ -1,5 +1,12 @@
 <!-- This contains the navigation for both the desktop and mobile sites -->
-<div id="home" class="header perrys-wrapper">
+<?php 
+	if($noContent == "no-content"){
+		echo "<div id='home' class='header perrys-wrapper nav-shrunk'>";
+	}
+	else{
+		echo "<div id='home' class='header perrys-wrapper'>";
+	}
+?>
 	<nav>
 		<?php include 'nav.php' ?>
 	</nav>
