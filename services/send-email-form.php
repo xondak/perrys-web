@@ -4,20 +4,27 @@
     $noContent="no-content";
 	$splashContent="";
 	include '../template-parts/upper.php';
-
+?>
+<div id="appointment" class="content wrapper">
+	<div class="container">
+		<div class="center">
+			<img src="../res/logo-black.svg" alt="" width="500px" style="border:none;filter:invert(100%);">
+<?php
 	if(isset($_POST['email'])) {
 
 	// EDIT THE 2 LINES BELOW AS REQUIRED
-	$email_to = "info@perrysfurniture.com";
+	$email_to = "gardinermoody@perrysfurniture.com";
 	$email_subject = "[DESIGN INQUIRY] ".$_POST['first_name']." ".$_POST['last_name'];
 
 	function died($error) {
 	
 		// your error code can go here
-		echo "We are very sorry, but there were error(s) found with the form you submitted. ";
+		echo "<h1>Oops, something went wrong</h1>We are very sorry, but there were error(s) found with the form you submitted. ";
 		echo "These errors appear below.<br /><br />";
 		echo $error."<br /><br />";
 		echo "Please go back and fix these errors.<br /><br />";
+		echo "</div></div></div>";
+		include '../template-parts/lower.php';
 		die();
 	}
 
@@ -82,10 +89,7 @@
 	'X-Mailer: PHP/' . phpversion();
 	@mail($email_to, $email_subject, $email_message, $headers);
 ?>
-<div id="content" class="wrapper">
-	<div class="container">
-		<div class="center">
-			<img src="../res/logo-black.svg" alt="" width="500px" style="margin: 3em 0;">
+			<img src="../res/logo-black.svg" alt="" width="500px" style="border:none;filter:invert(100%);">
 			<h2>Thank you for contacting Perry's Home Furnishings & Design.</h2>
 			<p style="margin-bottom: 3em;">We will be in touch with you very soon.</p>
 		</div>

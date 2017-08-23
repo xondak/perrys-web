@@ -2,7 +2,7 @@ body{
 	font-family: MontserratLight, 'Montserrat', sans-serif;
 	background: #FFF;
 	margin: 0;
-	font-size: 12pt;
+	font-size: 1em;
 	text-rendering: optimizeLegibility;
 	scroll-behavior: smooth;
 }
@@ -29,8 +29,7 @@ a:hover{
 	text-decoration: none;
 	border-bottom: 1px solid;
 }
-a[href^="#"]{
-}
+
 blockquote{
 	text-align: left;
 	background-color: #EEE;
@@ -79,6 +78,7 @@ article{
 	position: fixed;
 	z-index: 100;
 	right: 0;
+	top: 0;
 	width:100%;
 	transition: height 1s,
 				background 1s;
@@ -192,7 +192,7 @@ nav li{
 	width: 200px;
 	margin: 3.5em auto;
 }
-.learn-btn{
+.learn-btn, .form-button{
 	width: 200px;
 	color: #898989;
 	padding: 10px 0;
@@ -203,7 +203,11 @@ nav li{
 	border: 1px solid;
 	text-transform: uppercase;
 }
-.learn-btn:hover{
+.form-button{
+	color: #FFF;
+	background: none;
+}
+.learn-btn:hover, .form-button:hover{
 	color: #000;
 }
 /*-- Splash Screen --*/
@@ -264,12 +268,15 @@ a[ id="down" ]{
     background-image: url(res/mini-sprite.png);
     background-position: 0 -80px;
 	background-repeat: no-repeat;
-	transition: background-position .7s;
+	transition: background-position .7s,
+				filter .7s;
 	margin:0 auto;
+	filter: opacity(.5);
 }
 a[ id="down" ]:hover{
 	background-position: 0 -60px;
 	border-bottom: none;
+	filter: opacity(.9);
 }
 
 a[ id="down" ]:target ~ body .container{
@@ -429,15 +436,16 @@ a[ id="down" ]:target ~ body .container{
 	background-size: cover;
 	background-attachment: fixed;
 	color: #FFF;
-	text-shadow: #333 1px 1px 1px;
-	display: flex;
-	justify-content:center;
-	align-content:center;
-	flex-direction:column;
+	/*text-shadow: #333 1px 1px 1px;
 	-webkit-box-shadow: 0px 18px 65px -3px rgba(0,0,0,0.4);
 	-moz-box-shadow: 0px 18px 65px -3px rgba(0,0,0,0.4);
 	box-shadow: 0px 18px 65px -3px rgba(0,0,0,0.4);
 	position: relative;
+	*/
+	display: flex;
+	justify-content:center;
+	align-content:center;
+	flex-direction:column;
 }
 .content:nth-of-type(1){
 	z-index: 4;
@@ -473,8 +481,11 @@ a[ id="down" ]:target ~ body .container{
 .two-column .col-2{
 	width:85%;
 }
+
+#appointment{
+	background-image:url('services/bg.jpg');
+}
 .form{
-	max-width:700px;
 }
 textarea{
 	height: 150px;
@@ -482,7 +493,6 @@ textarea{
 .form .item{
 	display: inline-flex;
 	width:100%;
-	margin-bottom: 2em;
 	text-align: left;
 }
 .item label{
@@ -490,24 +500,40 @@ textarea{
 	height: 30px;
 	width: 40%;
 	padding: 4px;
+	display: none;
 }
-.item input, .item textarea{
-	width: 60%;
+.item input, .item textarea, .item .form-button{
+    padding: 1em;
+    font-family: "Montserrat";
+    color: #FFF;
+    background: none;
+    border: solid 1px;
+    margin: 1em;
+	font-size: 1em;
+	transition: color .7s;
 }
-.form-button{
-	background: #1a1a1a;
-	border: 0;
-	border-radius: 2px;
-	color: #fff;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-weight: 700;
-	letter-spacing: 0.046875em;
-	line-height: 1;
-	padding: 0.84375em 0.875em 0.78125em;
-	text-transform: uppercase;
+.item input{
+	width:50%;
 }
-.form-button:hover{
-	background: #007acc;
+.item textarea{
+	width:100%;
+	height: 6em;
+}
+.item input:focus, .item textarea:focus{
+	color: #000;
+}
+.item input::placeholder, .item textarea::placeholder{
+	color: #DDD;
+	font-style:italic;
+}
+.form-button:disabled{
+	color: #DDD;
+}
+.item .missing{
+	color: red;
+}
+input[disabled]{
+	pointer-events: none;
 }
 /*-- About --*/
 
@@ -1077,6 +1103,16 @@ ul {
 		font-size: 1em;
 	}
 
+	/* SERVICES */
+	.form .item{
+		display: inline;
+		width:100%;
+		text-align: left;
+	}
+	.item input{
+		width: 100%;
+	}
+
 	/* NEW ARRIVALS */
 	#new img{
 		max-width: 300px;
@@ -1211,6 +1247,6 @@ ul {
 
 @media all and (min-device-width:1080px) {
 	body{
-		font-size:1.25em;
+		font-size:1em;
 	}
 }
