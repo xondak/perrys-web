@@ -804,7 +804,7 @@ a #one{
 }
 
 /* NEW ARRIVALS */
-#new .splash{
+#new{
 	background-image: url('new-arrivals/mag.jpg');
 }
 #new img{

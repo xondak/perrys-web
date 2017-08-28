@@ -13,7 +13,7 @@
 	if(isset($_POST['email'])) {
 
 	// EDIT THE 2 LINES BELOW AS REQUIRED
-	$email_to = "gardinermoody@perrysfurniture.com";
+	$email_to = "kimberlyperry@perrysfurniture.com";
 	$email_subject = "[DESIGN INQUIRY] ".$_POST['first_name']." ".$_POST['last_name'];
 
 	function died($error) {
@@ -89,7 +89,6 @@
 	'X-Mailer: PHP/' . phpversion();
 	@mail($email_to, $email_subject, $email_message, $headers);
 ?>
-			<img src="../res/logo-black.svg" alt="" width="500px" style="border:none;filter:invert(100%);">
 			<h2>Thank you for contacting Perry's Home Furnishings & Design.</h2>
 			<p style="margin-bottom: 3em;">We will be in touch with you very soon.</p>
 		</div>
