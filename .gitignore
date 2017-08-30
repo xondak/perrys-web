@@ -61,3 +61,14 @@ compose/js/codemirror/util/event.js
 compose/js/codemirror/util/feature_detection.js
 compose/js/codemirror/util/operation_group.js
 compose/js/codemirror/util/StringStream.js
+compose/epiceditor/themes/editor/epic-light.css
+compose/epiceditor/images/edit.png
+compose/epiceditor/images/fullscreen.png
+compose/epiceditor/images/preview.png
+compose/epiceditor/js/epiceditor.js
+compose/epiceditor/js/epiceditor.min.js
+compose/epiceditor/themes/base/epiceditor.css
+compose/epiceditor/themes/editor/epic-dark.css
+compose/epiceditor/themes/preview/bartik.css
+compose/epiceditor/themes/preview/github.css
+compose/epiceditor/themes/preview/preview-dark.css

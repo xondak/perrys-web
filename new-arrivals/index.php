@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	include 'Parsedown.php';
 	$Parsedown = new Parsedown(); // Invokes Parsedown -- Moved from inside the foreach loop
 	$dir = 'posts/'; // $dir defines the directory to search for the .md Markdown files
@@ -89,6 +90,9 @@
 			print("<div class='container post'><div class='center new-posts'>"); // Creates individual post wrappers
 			echo $Parsedown->text(file_get_contents($post)); // Imports .md files and pipes it through Parsedown, fails graciously
 			$fancy = substr( htmlspecialchars($_GET["id"]), 0, -3);
+			if($_SESSION['valid'] === true){
+				echo "<a href='../compose/?id=".htmlspecialchars($_GET["id"])."' title='Edit this post.'>Edit this post.</a>";
+			}
 			echo "<div class='permalink-wrapper'>" . date("F jS, Y", strtotime($fancy)) . "</div>";
 			print("</div></div>"); // Closes each post's wrapper
 			include '../template-parts/lower.php'; // Includes the footer for the page

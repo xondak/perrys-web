@@ -869,6 +869,45 @@ a #one{
 	width:10%;
 }
 
+/* SECURE STUFF  */
+
+.securestuff a{
+	color: #FFF;
+
+}
+#edit-wrap{
+	display: flex;
+	justify-content: center;
+}
+.editor{
+	color: #000;
+}
+.editor a{
+	color: #000;
+}
+.editor form{
+	margin:0;
+}
+.editor textarea{
+	height: 60vh;
+	width: 40vw;
+	font-family: MontserratLight;
+	font-size: 1em;
+	margin: 1vw;
+}
+.edit-wrap{
+	display:flex;
+
+}
+iframe{
+	border:1px solid #999;
+	height: 60vh;
+	width:40vw;
+	margin:1vw;
+}
+.preview{
+	width:100%;
+}
 
 /* MANUFACTURERS PAGE */
 

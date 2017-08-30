@@ -29,6 +29,7 @@
                             $_SESSION['valid'] = true;
                             $_SESSION['timeout'] = time();
                             $_SESSION['username'] = 'perrysfern';
+                            $_SESSION['sessionvar'] = 'auth';
                             
                             $URL="/compose";
                             header ("Location: $URL"); 
@@ -54,7 +55,7 @@
                 <button class = "btn btn-lg btn-primary btn-block form-button" type = "submit" 
                     name = "login">Login</button>
                 </form>
-                Click here to clean <a href = "logout.php" tite = "Logout">Session.</a>
+                <p>Click here to clean <a href = "logout.php" tite = "Logout">Session.</a></p>
             </div>
         </div>
     </div>
