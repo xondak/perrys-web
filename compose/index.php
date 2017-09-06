@@ -8,35 +8,46 @@
             echo '<div class="content securestuff"><div id="content" class="editor">'; // Sets up he HTML for the editor
             $postId = htmlspecialchars($_GET["id"]); // Sets the HTML ID as a variable
             $post = "../new-arrivals/posts/" . $postId . ".md"; // Appends the relative path of the file to the post ID
+            $filename = "../new-arrivals/posts/" . date("Y-m-d") . ".md";
 
-            echo '<h1>Compose your Post</h1>
-            <div id="edit-wrap">
-                <form action="writeToFile.php" target="previewpane" method="POST">
-                    <textarea id="rawPost" name="postContent" rows="150" cols="150">'; // Creates text area and the form surrounding it
-            if($postId!=null){ // Checks if there's no post ID
+            echo '
+                <h1>Compose your Post</h1>
+                <div id="edit-wrap">
+                    <form action="writeToFile.php" target="previewpane" method="POST">
+                        <textarea id="rawPost" name="postContent" rows="150" cols="150">
+                '; // Creates text area and the form surrounding it
+            
+            if(isset($_GET["id"]) || is_readable($filename)){
+                $deletable = true;
+            }
+            else{
+                $deletable = false;
+            }
+
+            if($deletable === true){ // Checks if there's no post ID
                 echo file_get_contents($post); // Writes the content of the post to the text area
             }
-            echo '</textarea>';
-            // echo '<script src="/compose/epiceditor/js/epiceditor.min.js"></script>
-            //         <script>
-            //             var opts = {textarea: "rawPost"};
-            //             var editor = new EpicEditor().load();
-            //         </script>';
-            // This adds the epic editor. But it doesn't fit our needs.
+            echo '
+                        </textarea>
+                ';
             echo 
-            '
-            <p>
-                <input name="submit" type="submit"></input>
-                <button name="preview" type="submit">Preview</button>
-            </p>
-            ';
-            if($postId!=null){ // If this is an existing post, enable the delete button.
-                echo '<a href="writeToFile.php/?id=' . $postId . '" >Delete This Post</a>';
-            }
-            echo '</form>';
-            echo '<iframe src="" name="previewpane"></iframe>'; // 
+                '
+                        <p>
+                            <input name="submit" type="submit"></input>
+                            <button name="preview" type="submit">Preview</button>
+                        </p>
+                ';
+            echo '
+                    </form>
+                ';
             
-            echo '</div></div></div>'; // Close out div blocks
+            echo '<iframe src="" name="previewpane"></iframe>'; // This is the preview pane. It's awesome, but could be better.
+                        
+            echo '</div>';
+            if($deletable === true){ // If this is an existing post, enable the delete button.
+                echo '<a href="writeToFile.php/?id=' . $postId . '" target="previewpane" >Delete This Post</abutton>';
+            }
+            echo '</div></div>'; // Close out div blocks
             include '../template-parts/lower.php'; // Add a footer
         }
 

@@ -1,3 +1,69 @@
+.parallax {
+	height: 500px; /* fallback for older browsers */
+	height: 100vh;
+	width: 100vw;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-perspective: 300px;
+	perspective: 300px;
+}
+
+.parallax__group {
+	position: relative;
+	height: 500px; /* fallback for older browsers */
+	height: 100vh;
+	width:100vw;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.parallax__layer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.parallax__layer--fore {
+	-webkit-transform: translateZ(90px) scale(.7);
+	transform: translateZ(90px) scale(.7);
+	z-index: 1;
+}
+
+.parallax__layer--base {
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	z-index: 4;
+}
+
+.parallax__layer--back {
+	-webkit-transform: translateZ(-300px) scale(2);
+	transform: translateZ(-300px) scale(2);
+	z-index: 3;
+}
+
+.parallax__layer--deep {
+	-webkit-transform: translateZ(-600px) scale(5);
+    transform: translateZ(-600px) scale(5);
+    z-index: 2;
+	z-index: 2;
+}
+#group0{
+	z-index: 2;
+}
+#group1{
+	z-index: 1;
+}
+#group2{
+	z-index: -1;
+}
+#group3{
+	z-index:1;
+}
+#group4{
+	z-index: 2;
+}
 body{
 	font-family: MontserratLight, 'Montserrat', sans-serif;
 	background: #FFF;
@@ -447,7 +513,7 @@ a[ id="down" ]:target ~ body .container{
 	align-content:center;
 	flex-direction:column;
 }
-.content:nth-of-type(1){
+/* .content:nth-of-type(1){
 	z-index: 4;
 }
 .content:nth-of-type(2){
@@ -458,7 +524,7 @@ a[ id="down" ]:target ~ body .container{
 }
 .content:nth-of-type(4){
 	z-index: 1;
-}
+} */
 
 .center{
 	width: 50%;
@@ -544,7 +610,6 @@ input[disabled]{
 }
 
 .content p{
-	border-top: solid 2px #fff;
 	margin-top: 0;
 	padding-top: 8px;
 }
@@ -801,6 +866,40 @@ a #one{
 	background-image: url('img/landing/five.jpg');
 	height: 50%;
 	width: 50%;
+}
+.black{
+	color: #000;
+}
+#break{
+	background-color: #C1C1C1;
+	background-image: url('img/landing/four.jpg');
+	background-position: center;
+}
+.half-height{
+	height:60vh;
+}
+#social-promo{
+	background-color: #2C2736;
+}
+.socials{
+	font-family: "SocialMedia";
+    color: white;
+	font-size: 6em;
+}
+.socials a:hover{
+	border-bottom: none;
+}
+#design-services{
+	background-color: #625F68;
+	background-image: url('img/landing/five.jpg');
+}
+#design-services a{
+	color: white;
+}
+#design-services h1{
+	text-transform: uppercase;
+	font-size: 3em;
+    line-height: 0;
 }
 
 /* NEW ARRIVALS */
@@ -1282,6 +1381,10 @@ ul {
 @font-face {
     font-family: MontserratThin;
     src: url('/fonts/Montserrat-Thin.ttf');
+}
+@font-face {
+    font-family: SocialMedia;
+    src: url("/fonts/SocialType.ttf");
 }
 
 @media all and (min-device-width:1080px) {

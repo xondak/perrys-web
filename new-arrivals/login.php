@@ -12,7 +12,7 @@
    // error_reporting(E_ALL);
    // ini_set("display_errors", 1);
 ?>
-    <div id="new" class="content">
+    <div id="new" class="content securestuff">
         <div class="container">
             <div class="center">
                 <h2>Enter Username and Password</h2> 
@@ -24,8 +24,10 @@
                     if (isset($_POST['login']) && !empty($_POST['username']) 
                         && !empty($_POST['password'])) {
                         
+                        $pwHash = '$2y$10$8zmBhMRxs8pZ8Sgf4loqJ.YT8Y8tbQW7yIMJQnJZH8xwAY9hqNQhS';
+                        
                         if ($_POST['username'] == 'perrysfern' && 
-                            $_POST['password'] == 'passwEird!#') {
+                            password_verify($_POST['password'], $pwHash)) {
                             $_SESSION['valid'] = true;
                             $_SESSION['timeout'] = time();
                             $_SESSION['username'] = 'perrysfern';

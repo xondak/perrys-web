@@ -27,7 +27,7 @@
                     die('There was an error writing this file');
                 }
                 else {
-                    echo "Your post has been <a href='/new-arrivals/#down'>published</a>";
+                    echo "Your post has been published.";
                 }
             }
         } // End submit
