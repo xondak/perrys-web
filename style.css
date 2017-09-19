@@ -107,8 +107,8 @@ pre{
     display: block;
 	padding: 1em;
 	letter-spacing: 0;
-	line-height: 1em;
-    font-size: .8em;
+	line-height: 1.2em;
+    font-size: 1.1em;
 }
 code{
 	background-color: #333;
@@ -883,11 +883,13 @@ a #one{
 }
 .socials{
 	font-family: "SocialMedia";
-    color: white;
+    color: rgba(222, 255, 255, 0.8);
 	font-size: 6em;
+	transition: color .7s;
 }
-.socials a:hover{
+.socials:hover{
 	border-bottom: none;
+	color: rgba(255, 255, 255, 1)
 }
 #design-services{
 	background-color: #625F68;

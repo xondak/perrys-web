@@ -41,7 +41,7 @@
 	<div class="container">
 		<div class="center col-1">
 			<script type="text/javascript">
-					var submitbtn = document.getElementById("formBtn");
+					/*const submitbtn = document.getElementById("formBtn");
 					var reqf = {
 						fname: null,
 						lname: null,
@@ -79,7 +79,7 @@
 							console.log(reqf["comment"]);
 							document.getElementById("com").classList.add("missing");
 						}
-					}
+					}*/
 
 				</script>
 			<h2>Request an Appointment</h2>
@@ -104,7 +104,7 @@
 							<textarea id="com" placeholder="Design needs" onchange="reqf.comment = value; validate(); this.classList.remove('missing');" name="comments" maxlength="1000" cols="25" rows="6"></textarea>
 						</div>
 						<div onClick="formValidate();">
-							<input id="btn" class="form-button" type="submit" value="Submit" disabled="true">
+							<input id="btn" class="form-button" type="submit" value="Submit">
 						</div>
 					</div>
 				</form>

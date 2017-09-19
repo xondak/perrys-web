@@ -40,6 +40,15 @@
 	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 	ga('create', 'UA-73122506-1', 'auto');
 	ga('send', 'pageview');
+	<?php 
+	if ($location === "thank"){
+		echo "ga('send', {
+			hitType: 'event',
+			eventCategory: 'Form',
+			eventAction: 'signup',
+			eventLabel: '" . $_POST['first_name'] . " " . $_POST['last_name'] . "'
+		  });";
+	}; ?>
 </script>
 
 <!-- Facebook Pixel Code -->

@@ -14,8 +14,7 @@
                 <h1>Compose your Post</h1>
                 <div id="edit-wrap">
                     <form action="writeToFile.php" target="previewpane" method="POST">
-                        <textarea id="rawPost" name="postContent" rows="150" cols="150">
-                '; // Creates text area and the form surrounding it
+                        <textarea id="rawPost" name="postContent" rows="150" cols="150">'; // Creates text area and the form surrounding it
             
             if(isset($_GET["id"]) || is_readable($filename)){
                 $deletable = true;
@@ -27,14 +26,19 @@
             if($deletable === true){ // Checks if there's no post ID
                 echo file_get_contents($post); // Writes the content of the post to the text area
             }
-            echo '
-                        </textarea>
+            echo '</textarea>
                 ';
             echo 
                 '
                         <p>
-                            <input name="submit" type="submit"></input>
-                            <button name="preview" type="submit">Preview</button>
+                            ';
+            if($deletable === true){
+                echo '<button name="update" type="submit" value="' . $postId . '">Update</button>';
+            }
+            else{
+                echo '<input name="submit" type="submit"></input>';
+            }
+            echo '<button name="preview" type="submit">Preview</button>
                         </p>
                 ';
             echo '

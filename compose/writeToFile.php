@@ -1,8 +1,14 @@
 <?php
     session_start();
     if($_SESSION['valid'] === true &&  $_SESSION['username'] === 'perrysfern'){
-        $filename = "../new-arrivals/posts/" . date("Y-m-d") . ".md";
-        $postId = htmlspecialchars($_GET["id"]);
+        if (isset($_POST["update"])){
+            $postId = htmlspecialchars($_POST["value"]);
+            $filename = "../new-arrivals/posts/" . $postId . ".md";
+            echo $postId;
+        }
+        else{
+            $filename = "../new-arrivals/posts/" . date("Y-m-d") . ".md";
+        }
         if (isset($_POST['preview'])) {
             include '../new-arrivals/Parsedown.php';
             $Parsedown = new Parsedown();
@@ -11,14 +17,7 @@
             print("</div></div>");
         } // End preview
         elseif (isset($_POST['submit'])){
-            if(is_readable($filename)){
-                $data = $_POST['postContent'] . "\n";
-                $handle = fopen($filename, 'w');
-                fwrite($handle,$data);
-                fclose($handle);
-                echo "Post has been updated.";
-            }
-            elseif(isset($_POST['postContent'])) {
+            if(isset($_POST['postContent'])) {
                 $data = $_POST['postContent'] . "\n";
                 $handle = fopen($filename, 'w');
                 $ret = file_put_contents($filename, $data, FILE_APPEND | LOCK_EX);
@@ -31,6 +30,15 @@
                 }
             }
         } // End submit
+        elseif(isset($_POST['update'])){
+            if(is_readable($filename)){
+                $data = $_POST['postContent'] . "\n";
+                $handle = fopen($filename, 'w');
+                fwrite($handle,$data);
+                fclose($handle);
+                echo "Post has been updated.";
+            }
+        }
         elseif($postId != null){
             unlink("../new-arrivals/posts/".$postId.".md");
             echo "The post has been deleted.";
