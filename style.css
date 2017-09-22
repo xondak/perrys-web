@@ -131,6 +131,60 @@ article{
 	text-align: left;
 }
 
+#mailchimpHeader, #mailchimpHeader form, #mergeTable{
+	display:flex;
+	flex-direction: row;
+}
+#mailchimpHeader{
+	background-color: #625F68;
+	color: #fff;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:150;
+	width: 100vw;
+	justify-content: space-around;
+	min-height: 64;
+}
+#mailchimpHeader + header #home{
+	top:64;
+}
+#mailchimpHeader form input{
+	height: 30px;
+	margin: 17px 10px 0 10px;
+	background: none;
+	border: 1px solid #fff;
+	color: white;
+	font-family: MontserratLight, 'Montserrat', sans-serif;
+	letter-spacing: .1em;
+	padding:0 3px;
+}
+#mailchimpHeader .submit_container input{
+	transition: color .7s,
+				background-color .7s;
+}
+#mailchimpHeader .submit_container input:hover{
+	background-color: #FFF;
+	color: black;
+}
+#mailchimpHeader label{
+	display: none;
+}
+#closeBTN{
+	color: #FFF;
+	background: none;
+	height: 30px;
+	font-size: 1.2em;
+	border-radius: 15px;
+	text-transform: capitalize;
+	font-weight: bold;
+	border: none;
+	margin: 15px;
+}
+#mailchimpHeader input::placeholder{
+	font-style: italic;
+}
+
 .header{
 	background: rgba(255,255,255,0.9);
 	background: -moz-linear-gradient(top, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100%);
@@ -758,6 +812,8 @@ footer h2{
 	background-position: -128px 0px;
 }
 
+
+
 /*-- LANDING PAGE --*/
 .tile h1{
 	font-family: MontserratLight, 'Montserrat', sans-serif;
@@ -1125,6 +1181,21 @@ ul {
 }
 
 @media all and (max-device-width:900px) {
+	#mailchimpHeader, #mailchimpHeader form, #mergeTable{
+		flex-direction: column;
+	}
+	#mailchimpHeader form input{
+		width:80vw;
+		margin:0 auto;
+	}
+	#mailchimpHeader form{
+		align-items: center;
+	}
+	#closeBTN{
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
 	.tile h1{
 		font-size: 1em;
 	}

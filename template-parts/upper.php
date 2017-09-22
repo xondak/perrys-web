@@ -52,62 +52,6 @@
 		</script>
 	</head>
 	<body>
-		<style>
-			#mailchimpHeader, #mailchimpHeader form, #mergeTable{
-				display:flex;
-				flex-direction: row;
-			}
-			#mailchimpHeader{
-				background-color: #625F68;
-				color: #fff;
-				position:fixed;
-				top:0;
-				left:0;
-				z-index:150;
-				width: 100vw;
-				justify-content: space-around;
-				min-height: 64;
-			}
-			#mailchimpHeader + header #home{
-				top:64;
-			}
-			#mailchimpHeader form input{
-				height: 30px;
-				margin: 17px 10px 0 10px;
-				background: none;
-				border: 1px solid #fff;
-				color: white;
-				font-family: MontserratLight, 'Montserrat', sans-serif;
-				letter-spacing: .1em;
-				padding:0 3px;
-			}
-			#mailchimpHeader .submit_container input{
-				transition: color .7s,
-							background-color .7s;
-			}
-			#mailchimpHeader .submit_container input:hover{
-				background-color: #FFF;
-				color: black;
-			}
-			#mailchimpHeader label{
-				display: none;
-			}
-			#closeBTN{
-				color: #FFF;
-				background: none;
-				height: 30px;
-				font-size: 1.2em;
-				border-radius: 15px;
-				text-transform: capitalize;
-				font-weight: bold;
-				border: none;
-				margin: 15px;
-			}
-			#mailchimpHeader input::placeholder{
-				font-style: italic;
-			}
-
-		</style>
 		<div id="mailchimpHeader" class="js-delete">
 			<script>
 				window.onload = removeBanner('e');
