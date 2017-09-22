@@ -1181,15 +1181,22 @@ ul {
 }
 
 @media all and (max-device-width:900px) {
+	#mailchimHeader{
+		position: unset;
+	}
 	#mailchimpHeader, #mailchimpHeader form, #mergeTable{
 		flex-direction: column;
 	}
 	#mailchimpHeader form input{
 		width:80vw;
+		height: 50px;
 		margin:0 auto;
 	}
 	#mailchimpHeader form{
 		align-items: center;
+	}
+	.submit_container{
+		margin-top: 28px;
 	}
 	#closeBTN{
 		position: absolute;
