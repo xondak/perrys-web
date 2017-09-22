@@ -31,9 +31,112 @@
 				}
 			});
 
+			function removeBanner(e){
+				let mcBanner = document.cookie.indexOf('bannerHidden=');
+				const element = document.getElementById('mailchimpHeader');
+				if (mcBanner != -1){
+					element.parentNode.removeChild(element);
+				}
+			};
+
+			function setCookie(cname, cvalue, exdays, sub) {
+				var d = new Date();
+				d.setTime(d.getTime() + (exdays*24*60*60*1000));
+				var expires = "expires="+ d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+				if(sub===true){
+					document.forms["emailSignUpBanner"].submit();
+				};
+				removeBanner('e');
+			};
 		</script>
 	</head>
 	<body>
+		<style>
+			#mailchimpHeader, #mailchimpHeader form, #mergeTable{
+				display:flex;
+				flex-direction: row;
+			}
+			#mailchimpHeader{
+				background-color: #625F68;
+				color: #fff;
+				position:fixed;
+				top:0;
+				left:0;
+				z-index:150;
+				width: 100vw;
+				justify-content: space-around;
+				min-height: 64;
+			}
+			#mailchimpHeader + header #home{
+				top:64;
+			}
+			#mailchimpHeader form input{
+				height: 30px;
+				margin: 17px 10px 0 10px;
+				background: none;
+				border: 1px solid #fff;
+				color: white;
+				font-family: MontserratLight, 'Montserrat', sans-serif;
+				letter-spacing: .1em;
+				padding:0 3px;
+			}
+			#mailchimpHeader .submit_container input{
+				transition: color .7s,
+							background-color .7s;
+			}
+			#mailchimpHeader .submit_container input:hover{
+				background-color: #FFF;
+				color: black;
+			}
+			#mailchimpHeader label{
+				display: none;
+			}
+			#closeBTN{
+				color: #FFF;
+				background: none;
+				height: 30px;
+				font-size: 1.2em;
+				border-radius: 15px;
+				text-transform: capitalize;
+				font-weight: bold;
+				border: none;
+				margin: 15px;
+			}
+			#mailchimpHeader input::placeholder{
+				font-style: italic;
+			}
+
+		</style>
+		<div id="mailchimpHeader" class="js-delete">
+			<script>
+				window.onload = removeBanner('e');
+			</script>
+			<p><em>Join the Perry's Home family: </em></p>
+			<form id="emailSignUpBanner" action="https://perryshomefurnishingsanddesign.us12.list-manage.com/subscribe/post" method="POST">
+				<input type="hidden" name="u" value="6d640f52eacace4c983132e22">
+				<input type="hidden" name="id" value="4bd7d63c08">
+
+				<div id="mergeTable" class="mergeTable">
+
+					<div class="mergeRow dojoDndItem mergeRow-email" id="mergeRow-0">
+						<label for="MERGE0">Email Address <span class="req asterisk">*</span></label>
+						<div class="field-group">
+							<input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="35" value="" placeholder="Email Address">
+							
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="submit_container clear">
+					<input type="submit" class="button" name="submit" value="SUBSCRIBE" onclick="setCookie('bannerHidden', true, 220, true);">
+				</div>
+				<input type="hidden" name="ht" value="0e8c57baf2e9d1043a36fc473331b43a9062a9dd:MTUwNjA5NzIwNi43MTUy">
+				<input type="hidden" name="mc_signupsource" value="hosted">
+			</form>
+			<input id="closeBTN" type='button' value='x' onclick="setCookie('bannerHidden', true, 60);"></input>
+		</div>
 		<header class="site-header">
 			<?php
 				if ($location == "home") {

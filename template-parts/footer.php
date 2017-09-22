@@ -34,12 +34,18 @@
 </footer>
 <!-- Google Analytics -->
 <script>
+	let modalClose=document.cookie.indexOf('MCPopupClosed=');
+	console.log(modalClose);
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 	ga('create', 'UA-73122506-1', 'auto');
 	ga('send', 'pageview');
+	if (modalClose === -1){
+		ga('send', 'social', 'Mailchimp', 'Dialogue Shown', 'http://perryshomedesign.com');
+		console.log('Sending Mailchimp social tracker...')
+	};
 	<?php 
 	if ($location === "thank"){
 		echo "ga('send', {

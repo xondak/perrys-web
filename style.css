@@ -1123,15 +1123,6 @@ ul {
 .column-unbreakable{
 	display: inline-block;
 }
-/* MAILCHIMP MODAL FIX */
-.mc-closeModal {
-	position:absolute;
-	top: 0px !important;
-	right: 0px !important;
-	z-index: 9999 !important;
-	font-size: 3.5em !important;
-	text-align: center;
-}
 
 @media all and (max-device-width:900px) {
 	.tile h1{
