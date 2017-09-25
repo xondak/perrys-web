@@ -1181,8 +1181,9 @@ ul {
 }
 
 @media all and (max-device-width:900px) {
-	#mailchimHeader{
-		position: unset;
+	#mailchimpHeader{
+		position: sticky;
+		top: -100%;
 	}
 	#mailchimpHeader, #mailchimpHeader form, #mergeTable{
 		flex-direction: column;
