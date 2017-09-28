@@ -135,15 +135,17 @@ article{
 	display:flex;
 	flex-direction: row;
 }
-#announce-banner, #mcGoAway{
+#mailchimpHeader,#announce-banner, #mcGoAway{
+	width: 100vw;
+	justify-content: space-around;
+}
+#mailchimpHeader{
 	background-color: #625F68;
 	color: #fff;
 	position:fixed;
 	top:0;
 	left:0;
-	z-index:150;
-	width: 100vw;
-	justify-content: space-around;
+	z-index:100;
 	min-height: 64;
 }
 #mailchimpHeader + header #home{
@@ -1182,8 +1184,12 @@ ul {
 
 @media all and (max-device-width:900px) {
 	#mailchimpHeader{
-		position: sticky;
-		top: -100%;
+		position: fixed;
+		bottom:0;
+		top:unset;
+	}
+	#announce-banner{
+		padding: 25px 0 0;
 	}
 	#mailchimpHeader, #mailchimpHeader form, #mergeTable, #announce-banner, #mcGoAway{
 		flex-direction: column;

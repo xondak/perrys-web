@@ -31,37 +31,33 @@
 				}
 			});
 
-			function removeBanner(makeAnnouncement){
+			function removeBanner(collapseMe){ // This function handles the display of the email signup banner and the announcement banner.
 				let mcBanner = document.cookie.indexOf('bannerHidden=');
 				let announceBanner = document.cookie.indexOf('announceBanner=');
 				const element = document.getElementById('mailchimpHeader');
 				const mcElement = document.getElementById('mcGoAway');
 				const announceElement = document.getElementById('announce-banner');
 				if (mcBanner != -1 && announceBanner != -1){
-					element.parentNode.removeChild(element);
+					element.parentNode.removeChild(element); // Completely removes the mailchimpHeader (which contains both banners)
 				}
 				else if (mcBanner != -1 && announceBanner == -1){
-					if (makeAnnouncement === true){
-						console.log("2 1")
-						element.parentNode.removeChild(element);
+					if (collapseMe === true){
+						element.parentNode.removeChild(element); // This collapses the entire banner container
 					}
 					else{
-						console.log("2 2")
-						mcElement.parentNode.removeChild(mcElement);
+						mcElement.parentNode.removeChild(mcElement); // This removes the email signup (mcGoAway) and displays ONLY the announcement banner
 					}
 				}
 				else if (mcBanner == -1) {
-					if (makeAnnouncement === true){
-						console.log("3 1")
-						element.parentNode.removeChild(element);
+					if (collapseMe === true){
+						element.parentNode.removeChild(element); // Similar logic to above
 					}
 					else{
-						console.log("3 2")
 						announceElement.parentNode.removeChild(announceElement);
 					}
 				};
 			};
-
+			
 			function setCookie(cname, cvalue, exdays, sub) {
 				var d = new Date();
 				d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -70,7 +66,7 @@
 				if(sub===true){
 					document.forms["emailSignUpBanner"].submit();
 				};
-				removeBanner(true);
+				removeBanner(true); // This uses the collapseMe parameter of this function to completely remove the mailchimpHeader from DOM after clicking the close button
 			};
 		</script>
 	</head>
@@ -79,7 +75,7 @@
 			<div id="announce-banner">
 				<p><b>Going on now:</b> Buy any mattress and get the matching foundation <em>free!</em></p>
 				<p>Offer ends October 9th!</p>
-				<input id="closeBTN" class="announce-banner" type='button' value='x' onclick="setCookie('announceBanner', true, 60);"></input>
+				<input id="closeBTN" class="announce-banner" type='button' value='x' onclick="setCookie('announceBanner', true, 2);"></input>
 			</div>
 			<div id="mcGoAway">
 				<p class="mcGoAway"><em>Join the Perry's Home family: </em></p>
@@ -108,7 +104,7 @@
 				<input id="closeBTN" class="mcGoAway" type='button' value='x' onclick="setCookie('bannerHidden', true, 60);"></input>
 			</div>
 			<script>
-				window.onload = removeBanner(false);
+				window.onload = removeBanner(false); // Set this parameter to TRUE when there are no announcements to be made.
 			</script>
 
 		</div>
