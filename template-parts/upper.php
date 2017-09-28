@@ -31,12 +31,35 @@
 				}
 			});
 
-			function removeBanner(e){
+			function removeBanner(makeAnnouncement){
 				let mcBanner = document.cookie.indexOf('bannerHidden=');
+				let announceBanner = document.cookie.indexOf('announceBanner=');
 				const element = document.getElementById('mailchimpHeader');
-				if (mcBanner != -1){
+				const mcElement = document.getElementById('mcGoAway');
+				const announceElement = document.getElementById('announce-banner');
+				if (mcBanner != -1 && announceBanner != -1){
 					element.parentNode.removeChild(element);
 				}
+				else if (mcBanner != -1 && announceBanner == -1){
+					if (makeAnnouncement === true){
+						console.log("2 1")
+						element.parentNode.removeChild(element);
+					}
+					else{
+						console.log("2 2")
+						mcElement.parentNode.removeChild(mcElement);
+					}
+				}
+				else if (mcBanner == -1) {
+					if (makeAnnouncement === true){
+						console.log("3 1")
+						element.parentNode.removeChild(element);
+					}
+					else{
+						console.log("3 2")
+						announceElement.parentNode.removeChild(announceElement);
+					}
+				};
 			};
 
 			function setCookie(cname, cvalue, exdays, sub) {
@@ -47,39 +70,47 @@
 				if(sub===true){
 					document.forms["emailSignUpBanner"].submit();
 				};
-				removeBanner('e');
+				removeBanner(true);
 			};
 		</script>
 	</head>
 	<body>
 		<div id="mailchimpHeader" class="js-delete">
-			<script>
-				window.onload = removeBanner('e');
-			</script>
-			<p><em>Join the Perry's Home family: </em></p>
-			<form id="emailSignUpBanner" action="https://perryshomefurnishingsanddesign.us12.list-manage.com/subscribe/post" method="POST">
-				<input type="hidden" name="u" value="6d640f52eacace4c983132e22">
-				<input type="hidden" name="id" value="4bd7d63c08">
+			<div id="announce-banner">
+				<p><b>Going on now:</b> Buy any mattress and get the matching foundation <em>free!</em></p>
+				<p>Offer ends October 9th!</p>
+				<input id="closeBTN" class="announce-banner" type='button' value='x' onclick="setCookie('announceBanner', true, 60);"></input>
+			</div>
+			<div id="mcGoAway">
+				<p class="mcGoAway"><em>Join the Perry's Home family: </em></p>
+				<form id="emailSignUpBanner" class="mcGoAway" action="https://perryshomefurnishingsanddesign.us12.list-manage.com/subscribe/post" method="POST">
+					<input type="hidden" name="u" value="6d640f52eacace4c983132e22">
+					<input type="hidden" name="id" value="4bd7d63c08">
 
-				<div id="mergeTable" class="mergeTable">
+					<div id="mergeTable" class="mergeTable">
 
-					<div class="mergeRow dojoDndItem mergeRow-email" id="mergeRow-0">
-						<label for="MERGE0">Email Address <span class="req asterisk">*</span></label>
-						<div class="field-group">
-							<input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="35" value="" placeholder="Email Address">
+						<div class="mergeRow dojoDndItem mergeRow-email" id="mergeRow-0">
+							<label for="MERGE0">Email Address <span class="req asterisk">*</span></label>
+							<div class="field-group">
+								<input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="35" value="" placeholder="Email Address">
+								
+							</div>
 							
 						</div>
 						
 					</div>
-					
-				</div>
-				<div class="submit_container clear">
-					<input type="submit" class="button" name="submit" value="SUBSCRIBE" onclick="setCookie('bannerHidden', true, 220, true);">
-				</div>
-				<input type="hidden" name="ht" value="0e8c57baf2e9d1043a36fc473331b43a9062a9dd:MTUwNjA5NzIwNi43MTUy">
-				<input type="hidden" name="mc_signupsource" value="hosted">
-			</form>
-			<input id="closeBTN" type='button' value='x' onclick="setCookie('bannerHidden', true, 60);"></input>
+					<div class="submit_container clear">
+						<input type="submit" class="button" name="submit" value="SUBSCRIBE" onclick="setCookie('bannerHidden', true, 220, true);">
+					</div>
+					<input type="hidden" name="ht" value="0e8c57baf2e9d1043a36fc473331b43a9062a9dd:MTUwNjA5NzIwNi43MTUy">
+					<input type="hidden" name="mc_signupsource" value="hosted">
+				</form>
+				<input id="closeBTN" class="mcGoAway" type='button' value='x' onclick="setCookie('bannerHidden', true, 60);"></input>
+			</div>
+			<script>
+				window.onload = removeBanner(false);
+			</script>
+
 		</div>
 		<header class="site-header">
 			<?php

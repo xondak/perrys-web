@@ -1,6 +1,6 @@
 		<!DOCTYPE html>
 		<html lang="en-US">
-		<link rel="stylesheet" type="text/css"  href="/style.css?v=3.0">
+		<link rel="stylesheet" type="text/css"  href="/style.css?v=3.1">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="Maine's finest home furnishings and accessories. Come experience the difference in Belfast, Maine!">

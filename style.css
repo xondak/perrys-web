@@ -131,11 +131,11 @@ article{
 	text-align: left;
 }
 
-#mailchimpHeader, #mailchimpHeader form, #mergeTable{
+#mailchimpHeader, #mailchimpHeader form, #mergeTable, #announce-banner, #mcGoAway{
 	display:flex;
 	flex-direction: row;
 }
-#mailchimpHeader{
+#announce-banner, #mcGoAway{
 	background-color: #625F68;
 	color: #fff;
 	position:fixed;
@@ -1185,7 +1185,7 @@ ul {
 		position: sticky;
 		top: -100%;
 	}
-	#mailchimpHeader, #mailchimpHeader form, #mergeTable{
+	#mailchimpHeader, #mailchimpHeader form, #mergeTable, #announce-banner, #mcGoAway{
 		flex-direction: column;
 	}
 	#mailchimpHeader form input{
