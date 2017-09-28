@@ -1141,6 +1141,9 @@
 		<li>
 			<a href="http://puretalalaybliss.com">Pure Talalay Bliss</a>
 		</li>
+		<li>
+			<a href="http://www.tempurpedic.com">Tempur-pedic</a>
+		</li>
 	</ul>
 	</div>
 	
@@ -1152,6 +1155,9 @@
 		</li>
 		<li>
 			<a href="http://www.bedframes.com">Mantua</a>
+		</li>
+		<li>
+			<a href="http://www.tempurpedic.com">Tempur-pedic</a>
 		</li>
 	</ul>
 	</div>
@@ -1182,6 +1188,9 @@
 	<ul>
 		<li>
 			<a href="http://puretalalaybliss.com">Pure Talalay Bliss</a>
+		</li>
+		<li>
+			<a href="http://www.tempurpedic.com">Tempur-pedic</a>
 		</li>
 	</ul>
 	</div>
